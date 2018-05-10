@@ -15,6 +15,18 @@
                         <p>SOPnya Apa Aja???</p>
                     </div>
                 </div>
+
+                <div style="padding:15px 0; ">
+                    <form>
+                      <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1" style="font-size: 18px; padding: 10px 0;">   Saya sudah memakai APD dengan benar</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Lanjut</button>
+                    </form>    
+                </div>
+
             </div>
             <hr class="mx-auto small text-hr">
         </div>

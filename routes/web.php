@@ -28,3 +28,6 @@ Route::get('/report', 'InspeksiController@report');
 Route::get('/checklist', 'ChecklistController@index');
 Route::get('/crane', 'ChecklistController@crane');
 Route::get('/forklift', 'ChecklistController@forklift');
+
+// ------------------Inspeksi-------------------
+Route::get('/goliath', 'InspeksiController@goliath');

@@ -40,4 +40,9 @@ class InspeksiController extends Controller
     {
         return view('inspeksi.report');
     }
+
+    public function goliath()
+    {
+        return view('inspeksi.goliath');
+    }
 }

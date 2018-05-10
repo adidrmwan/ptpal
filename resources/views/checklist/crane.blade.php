@@ -16,22 +16,31 @@
                         </div>
                         <div class="panel-body">
                             {{-- <hr class="center-block small text-hr"> --}}
+                            <br> 
+                            <a href="goliath">
+                                <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
+                                   GOLIATH 300 TON GANTRY CRANE                            
+                                </button>
+                            </a>
+
                             <br>
-                            <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
-                                Tipe Crane 1
-                            </button>
+                            <a href="goliath">
+                                <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
+                                    LLC CRANE
+                                </button>
+                            </a>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
-                                Tipe Crane 2
-                            </button>
+                            <a href="goliath">
+                                <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
+                                    MOBILE CRANE / PH CRANE
+                                </button>
+                            </a>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
-                                Tipe Crane 3
-                            </button>
-                            <br>
-                            <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
-                                Tipe Crane 4
-                            </button>
+                            <a href="goliath">
+                                <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
+                                    OVERHEAD CRANE
+                                </button>
+                            </a>
                         </div>
                         <div class="panel-footer">
                         </div>
