@@ -29,7 +29,8 @@
                             <p class="lead"> PT PAL Indonesia (PERSERO) adalah .... </p>
                         </div>
                     </div>
-                    <div class="col-sm-6"><img src="dist/images/info.png" alt="imfo" class="img-responsive"></div>
+<!--                     <div class="col-sm-6"><img src="dist/images/info.png" alt="imfo" class="img-responsive">
+                    </div> -->
                 </div>
             </div>
         </div>
