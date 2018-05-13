@@ -14,43 +14,43 @@
                                 <form class="form-horizontal" role="form" method="POST" action="{{route('register')}}">
                                      {{-- Text input --}}
 
-                                     <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
-                                        <label for="firstname" class="col-md-4 control-label">Nama Awal</label>
+                                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                        <label for="name" class="col-md-4 control-label">Nama</label>
 
                                         <div class="col-md-6">
-                                            <input id="firstname" type="text" class="form-control input-md" name="firstname" value="{{ old('firstname') }}" required autofocus>
+                                            <input id="name" type="text" class="form-control input-md" name="name" value="{{ old('name') }}" required autofocus>
 
-                                            @if ($errors->has('firstname'))
+                                            @if ($errors->has('name'))
                                                 <span class="help-block">
-                                                    <strong>{{ $errors->first('firstname') }}</strong>
+                                                    <strong>{{ $errors->first('name') }}</strong>
                                                 </span>
                                             @endif
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
-                                        <label for="name" class="col-md-4 control-label">Nama Akhir</label>
+                                    <div class="form-group{{ $errors->has('departemen') ? ' has-error' : '' }}">
+                                        <label for="name" class="col-md-4 control-label">Departemen</label>
 
                                         <div class="col-md-6">
-                                            <input id="lastname" type="text" class="form-control input-md" name="lastname" value="{{ old('lastname') }}" required autofocus>
+                                            <input id="departemen" type="text" class="form-control input-md" name="departemen" value="{{ old('departemen') }}" required autofocus>
 
-                                            @if ($errors->has('lastname'))
+                                            @if ($errors->has('departemen'))
                                                 <span class="help-block">
-                                                    <strong>{{ $errors->first('lastname') }}</strong>
+                                                    <strong>{{ $errors->first('departemen') }}</strong>
                                                 </span>
                                             @endif
                                         </div>
                                     </div>
 
-                                    <div class="form-group{{ $errors->has('phonenumber') ? ' has-error' : '' }}">
-                                        <label for="phonenumber" class="col-md-4 control-label">Nomer HP</label>
+                                    <div class="form-group{{ $errors->has('divisi') ? ' has-error' : '' }}">
+                                        <label for="divisi" class="col-md-4 control-label">Divisi</label>
 
                                         <div class="col-md-6">
-                                            <input id="phonenumber" type="text" class="form-control input-md" name="phonenumber" value="{{ old('phonenumber') }}" required autofocus>
+                                            <input id="divisi" type="text" class="form-control input-md" name="divisi" value="{{ old('divisi') }}" required autofocus>
 
-                                            @if ($errors->has('phonenumber'))
+                                            @if ($errors->has('divisi'))
                                                 <span class="help-block">
-                                                    <strong>{{ $errors->first('phonenumber') }}</strong>
+                                                    <strong>{{ $errors->first('divisi') }}</strong>
                                                 </span>
                                             @endif
                                         </div>

@@ -31,3 +31,10 @@ Route::get('/forklift', 'ChecklistController@forklift');
 
 // ------------------Inspeksi-------------------
 Route::get('/goliath', 'InspeksiController@goliath');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

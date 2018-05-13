@@ -58,7 +58,7 @@
                             {{-- @if(Auth::guest())
                             <li><a href="/search">Browse Jobs</a></li>
                             @else
-                                @if(Auth::user()->permission==0)
+                                @if(Auth::user())
                                 <li><a href="/search">Browse Jobs</a></li>
                                 @endif
                             @endif --}}
@@ -83,7 +83,7 @@
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <span>{{ Auth::user()->lastname }}</span> <i class="icon-user fa"></i> <i
                                         class=" icon-down-open-big fa"></i></a>
-                                        @if(Auth::user()->permission==1)
+                                        @if(Auth::user())
                                         <ul class="dropdown-menu user-menu">
                                             <li class="active"><a href="/admin"><i class="icon-home"></i> Personal Home
                                             </a></li>
@@ -107,7 +107,7 @@
                                {{--  @if(Auth::guest())
                                     <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/job/create">Post A Job</a></li>
                                 @else
-                                    @if(Auth::user()->permission==0)
+                                    @if(Auth::user())
                                         <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/job/create">Post A Job</a></li>
                                     @endif
                                 @endif --}}
