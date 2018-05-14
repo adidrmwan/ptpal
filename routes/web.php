@@ -14,11 +14,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-//User's login
+//------------------------User's login-------------------------
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//Manager's login & register
+//-------------------------Manager's login & register-------------------------
 Route::prefix('manager')->group(function() {
     Route::get('/login', 'Auth\ManagerLoginController@showLoginForm')->name('manager.login');
     Route::post('/login', 'Auth\ManagerLoginController@login')->name('manager.login.submit');
@@ -28,7 +28,7 @@ Route::prefix('manager')->group(function() {
     Route::get('/', 'ManagerController@index')->name('manager.dashboard');
 });
 
-//Petugas login & register
+//-------------------------Petugas login & register -------------------------
 Route::prefix('petugas')->group(function() {
     Route::get('/login', 'Auth\PetugasLoginController@showLoginForm')->name('petugas.login');
     Route::post('/login', 'Auth\PetugasLoginController@login')->name('petugas.login.submit');
@@ -55,3 +55,5 @@ Route::get('/llc', 'InspeksiController@llc');
 Route::get('/ph', 'InspeksiController@ph');
 Route::get('/overhead', 'InspeksiController@overhead');
 
+// ----------------maintenance------------------------
+Route::get('/report_inspeksi', 'MaintenanceController@reportinspeksi');

@@ -70,7 +70,8 @@
                                 {{-- <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/job/create">Post A Job</a></li> --}}
                             @else
 
-                                <li> <a href=""></a> </li>
+                                <li> <a href=""> Home</a> </li>
+                                <li> <a href="reportinspeksi"> Hasil Inspeksi</a> </li>
                                 <li>
                                     <a href="{{ route('petugas.logout') }}"
                                         onclick="event.preventDefault();
