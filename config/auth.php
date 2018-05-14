@@ -45,6 +45,22 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'manager' => [
+            'driver' => 'session',
+            'provider' => 'manager',
+        ],
+        'manager-api' => [
+            'driver' => 'token',
+            'provider' => 'manager',
+        ],
+        'petugas' => [
+            'driver' => 'session',
+            'provider' => 'petugas',
+        ],
+        'petugas-api' => [
+            'driver' => 'token',
+            'provider' => 'petugas',
+        ],
     ],
 
     /*
@@ -69,7 +85,14 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
+        'manager' => [
+            'driver' => 'eloquent',
+            'model' => App\Manager::class,
+        ],
+        'petugas' => [
+            'driver' => 'eloquent',
+            'model' => App\PetugasMaintenance::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -96,6 +119,16 @@ return [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
+        ],
+        'manager' => [
+            'provider' => 'manager',
+            'table' => 'password_resets',
+            'expire' => 15,
+        ],
+        'petugas' => [
+            'provider' => 'petugas',
+            'table' => 'password_resets',
+            'expire' => 15,
         ],
     ],
 
