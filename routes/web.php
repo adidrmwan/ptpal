@@ -51,5 +51,7 @@ Route::get('/forklift', 'ChecklistController@forklift');
 
 // ------------------Inspeksi-------------------
 Route::get('/goliath', 'InspeksiController@goliath');
-
+Route::get('/llc', 'InspeksiController@llc');
+Route::get('/ph', 'InspeksiController@ph');
+Route::get('/overhead', 'InspeksiController@overhead');
 

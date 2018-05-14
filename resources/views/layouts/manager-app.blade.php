@@ -80,30 +80,6 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>{{ Auth::user()->lastname }}</span> <i class="icon-user fa"></i> <i
-                                        class=" icon-down-open-big fa"></i></a>
-                                        @if(Auth::user())
-                                        <ul class="dropdown-menu user-menu">
-                                            <li class="active"><a href="/admin"><i class="icon-home"></i> Personal Home
-                                            </a></li>
-                                            <li><a href="/admin-users"><i class="icon-users"></i> Users </a></li>
-                                            <li><a href="/admin-companies"><i class="icon-th-thumb"></i> Companies </a></li>
-                                            <li><a href="/admin-categories"><i class="icon-docs"></i> Categories </a></li>
-                                            <li><a href="/admin-jobs"><i class="icon-book"></i> Jobs </a></li>
-                                        </ul>
-                                        @else
-                                        <ul class="dropdown-menu user-menu">
-                                            <li class="active"><a href="/account-home"><i class="icon-home"></i> Personal Home
-                                            </a></li>
-                                            @if(Auth::user()->company()->count())
-                                                <li><a href="/company"><i class="icon-th-thumb"></i> My Company </a></li>
-                                                <li><a href="/job"><i class="icon-docs"></i> Posted Jobs </a></li>
-                                            @endif
-                                            <li><a href="/saved"><i class="icon-heart"></i> Saved Search </a></li>
-                                        </ul>
-                                        @endif
-                                </li>
                                {{--  @if(Auth::guest())
                                     <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/job/create">Post A Job</a></li>
                                 @else

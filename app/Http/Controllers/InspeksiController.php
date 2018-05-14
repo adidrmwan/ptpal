@@ -45,4 +45,18 @@ class InspeksiController extends Controller
     {
         return view('inspeksi.goliath');
     }
+
+    public function llc()
+    {
+        return view('inspeksi.llc');
+    }
+
+    public function ph()
+    {
+        return view('inspeksi.ph');
+    }
+    public function overhead()
+    {
+        return view('inspeksi.overhead');
+    }
 }

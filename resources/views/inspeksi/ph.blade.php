@@ -8,7 +8,7 @@
             <div class="row clearfix">
                 <h1 class="text-center title-1"> <b> Inspeksi </b> </h1>
                 <h2 class="text-center title-1">
-                    GOLIATH 300 TON GANTRY CRANE <br>
+                   MOBILE CRANE / PH CRANE <br>
                     PRE-OPERATIONAL INSPECTION CHECKLIST <br>
                     (CHECKLIST INSPEKSI HARIAN SEBELUM PENGGOPERASIAN CRANE)
                 </h2>
@@ -121,7 +121,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Tagged crane and hoist</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Outriggers dan boxes</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -144,7 +144,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Control Devices</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Drive train dan suspension</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -190,7 +190,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Hook dan hook latch</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Hook rollers dan assembly </label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -213,7 +213,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Rail long travel dan rail cross travel</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Slew ring dan slew ring bolts</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -236,7 +236,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Wire rope</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Wire rope dan rope sheaves</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -259,7 +259,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Load Chain</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Drive systems ( winches, hydraulic motors, gearboxes, drive-shafts )</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -282,7 +282,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Reeving</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Control systems</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -305,7 +305,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Limit Switches</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Electrical systems</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -328,7 +328,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Pelumasan bearing, wires, gear reducers hydraulic units, dll</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Oil leakage</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -351,7 +351,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Fuctional switch, controller, alarm, signal indicator, voltage</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Booms</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -374,7 +374,7 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Rigging</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Electric motors</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -397,7 +397,76 @@
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
-                                                     <label class="col-form-label" for="formGroupExampleInput">Crane Tracks</label>
+                                                     <label class="col-form-label" for="formGroupExampleInput">Handrails</label>
+                                                </div>
+                                                 <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Baik
+                                                    </label> &nbsp; &nbsp; &nbsp; &nbsp;
+                                                    
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Tidak Baik
+                                                      </label>
+                                                  </div>
+                                                 <div class="col-sm-4">
+                                                    <div class="input-group">
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                    </div>
+                                                 </div>                                              
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding: 15px 0;">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-4">
+                                                     <label class="col-form-label" for="formGroupExampleInput">Cab glass and wipers</label>
+                                                </div>
+                                                 <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Baik
+                                                    </label> &nbsp; &nbsp; &nbsp; &nbsp;
+                                                    
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Tidak Baik
+                                                      </label>
+                                                  </div>
+                                                 <div class="col-sm-4">
+                                                    <div class="input-group">
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                    </div>
+                                                 </div>                                              
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding: 15px 0;">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-4">
+                                                     <label class="col-form-label" for="formGroupExampleInput">Crane tracks</label>
+                                                </div>
+                                                 <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Baik
+                                                    </label> &nbsp; &nbsp; &nbsp; &nbsp;
+                                                    
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Tidak Baik
+                                                      </label>
+                                                  </div>
+                                                 <div class="col-sm-4">
+                                                    <div class="input-group">
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                    </div>
+                                                 </div>                                              
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding: 15px 0;">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-4">
+                                                     <label class="col-form-label" for="formGroupExampleInput">Safety devices</label>
                                                 </div>
                                                  <div class="col-sm-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
