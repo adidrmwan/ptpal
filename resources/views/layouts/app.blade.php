@@ -13,6 +13,7 @@
     <title>PT PAL Indonesia - @yield('title')</title>
     {{-- Bootstrap core CSS --}}
     <link href="{{ URL::asset('dist/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('dist/assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     {{-- Custom styles for this template --}}

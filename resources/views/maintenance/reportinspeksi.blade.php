@@ -22,47 +22,43 @@
         <div class="container">
             <div class="section-content">
                 <div class="row ">
-                    <h1 class="text-center title-1"> PETUGAS DASHBOARD </h1>
+                    <h1 class="text-center title-1"> REPORT INSPEKSI </h1>
                     <hr class="center-block small text-hr">
-                    <div class="col-sm-6">
-                        <div class="text-content has-lead-para text-left">
-                            <p class="lead"> PT PAL Indonesia (PERSERO) adalah .... </p>
-                        </div>
+                    <div class="col-sm-12">
+                        <table class="table">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Type of Crane</th>
+                              <th scope="col">Nama Mesin</th>
+                              <th scope="col">Petugas</th>
+                              <th scope="col">Report</th>
+                              <th scope="col">Maintenance</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></td>
+                              <td><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true">&nbsp;</span>Edit</button></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></td>
+                              <td><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true">&nbsp;</span>Edit</button></td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
-<!--                     <div class="col-sm-6"><img src="dist/images/info.png" alt="imfo" class="img-responsive">
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
     <!-- /.main-container -->
-    <div class="parallaxbox about-parallax-bottom">
-        <div class="container">
-            <div class="row text-center featuredbox">
-                <div class="col-sm-4 xs-gap">
-                    <div class="inner">
-                        <div class="icon-box-wrap"><i class="icon-book-open ln-shadow-box shape-3"></i></div>
-                        <h3 class="title-4">Crane</h3>
-                        <p>Keterangan</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 xs-gap">
-                    <div class="inner">
-                        <div class="icon-box-wrap"><i class=" icon-lightbulb ln-shadow-box shape-6"></i></div>
-                        <h3 class="title-4">Forklift</h3>
-                        <p>Keterangan</p>
-                    </div>
-                </div>
-                @if(Auth::guard('manager')->user())
-                <div class="col-sm-4 xs-gap">
-                    <div class="inner">
-                        <div class="icon-box-wrap"><i class="icon-megaphone ln-shadow-box shape-5"></i></div>
-                        <h3 class="title-4">Dan Lain-lain</h3>
-                        <p>Keterangan</p>
-                    </div>
-                </div>
-                @endif
-            </div>
-        </div>
-    </div>
 @endsection
