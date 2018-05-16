@@ -17,15 +17,39 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Route untuk user yang baru register
+Route::group(['prefix' => 'home', 'middleware' => ['auth']], function(){
+	Route::get('/', function(){
+		return view('home');
+	});
+
+});
+
+// Route untuk user manager
+Route::group(['prefix' => 'manager', 'middleware' => ['auth', 'role:manager']], function(){
+	Route::get('/', function(){
+		return view('manager.home');
+	});
+
+});
+
+// Route untuk user petugas
+Route::group(['prefix' => 'petugas', 'middleware' => ['auth', 'role:petugas']], function(){
+	Route::get('/', 'InspeksiController@sop')->name('petugas.home');
+	Route::post('/a', 'InspeksiController@apdsubmit')->name('petugas.apd.submit');
+	Route::get('/crane', 'ChecklistController@crane')->name('petugas.checklist.crane');
+});
+
 Route::get('/divisi', 'InspeksiController@index');
-Route::get('/sop', 'InspeksiController@sop');
+
 Route::get('/apd', 'InspeksiController@apd');
 Route::get('/inspeksi', 'InspeksiController@inspeksi');
 Route::get('/bulan', 'InspeksiController@bulan');
 Route::get('/notifikasi', 'InspeksiController@notifikasi');
 Route::get('/report', 'InspeksiController@report');
-Route::get('/checklist', 'ChecklistController@index');
+
 Route::get('/crane', 'ChecklistController@crane');
 Route::get('/forklift', 'ChecklistController@forklift');
 

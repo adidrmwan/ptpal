@@ -17,14 +17,13 @@
                 </div>
 
                 <div style="padding:15px 0; ">
-                    <form>
-                      <div class="form-group">
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1" style="font-size: 18px; padding: 10px 0;">   Saya sudah memakai APD dengan benar</label>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Lanjut</button>
-                    </form>    
+                    <form role="form" method="POST" action="{{ route('petugas.apd.submit') }}">
+                        {{ csrf_field() }}
+                        <input type="checkbox" name="checkbox" value="check"  />
+                        <input type="submit" name="email_submit" value="submit" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}"  />
+                    </form> 
+
+
                 </div>
 
             </div>
