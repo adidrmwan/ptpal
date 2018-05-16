@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class ManagerController extends Controller
 {
+<<<<<<< HEAD
     /**
      * Create a new controller instance.
      *
@@ -23,5 +24,16 @@ class ManagerController extends Controller
     public function index()
     {
         return view('manager.dashboard');
+=======
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:ROLE_MANAGER');
+    }
+
+    public function index()
+    {
+        return view('manager.home');
+>>>>>>> user
     }
 }

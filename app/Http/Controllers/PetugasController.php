@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class PetugasController extends Controller
 {
+<<<<<<< HEAD
     /**
      * Create a new controller instance.
      *
@@ -23,5 +24,9 @@ class PetugasController extends Controller
     public function index()
     {
         return view('petugas.dashboard');
+=======
+    public function apdsubmit(Request $request){
+    	return redirect()->intended(route('petugas.checklist.crane'));
+>>>>>>> user
     }
 }

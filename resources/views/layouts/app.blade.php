@@ -56,13 +56,15 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-left">
-                            {{-- @if(Auth::guest())
                             <li><a href="/search">Browse Jobs</a></li>
+<<<<<<< HEAD
                             @else
                                 @if(Auth::user())
                                 <li><a href="/search">Browse Jobs</a></li>
                                 @endif
                             @endif --}}
+=======
+>>>>>>> user
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             @if (Auth::guest())
@@ -82,7 +84,7 @@
                                     </form>
                                 </li>
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>{{ Auth::user()->lastname }}</span> <i class="icon-user fa"></i> <i
+                                    <i class="icon-user fa"></i> <i
                                         class=" icon-down-open-big fa"></i></a>
                                         @if(Auth::user())
                                         <ul class="dropdown-menu user-menu">

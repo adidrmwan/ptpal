@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class InspeksiController extends Controller
 {
+    public function apdsubmit(Request $request)
+    {
+        return redirect()->intended(route('petugas.checklist.crane'));
+    }
     public function index()
     {
         return view('inspeksi.divisi');
@@ -25,7 +29,8 @@ class InspeksiController extends Controller
     {
         return view('inspeksi.inspeksi');
     }
-
+    
+    
     public function bulan()
     {
         return view('inspeksi.bulan');
