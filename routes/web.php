@@ -26,11 +26,12 @@ Route::group(['prefix' => 'manager', 'middleware' => ['auth', 'role:manager']], 
 });
 
 // Route untuk user petugas
-Route::group(['prefix' => 'petugas', 'middleware' => ['auth', 'role:petugas']], function(){
+Route::group(['prefix' => 'petugas', 'middleware' => ['auth', 'role:petugas_checklist']], function(){
     Route::get('/', 'InspeksiController@sop')->name('petugas.home');
     Route::post('/a', 'InspeksiController@apdsubmit')->name('petugas.apd.submit');
     Route::get('/crane', 'ChecklistController@crane')->name('petugas.checklist.crane');
     Route::get('/crane/goliath', 'InspeksiController@showCraneGoliath')->name('crane.goliath');
+    Route::post('/crane/goliath', 'InspeksiController@submitCraneGoliath')->name('crane.goliath.submit');
     Route::get('/crane/llc', 'InspeksiController@showCraneLLC')->name('crane.llc');
     Route::get('/crane/ph', 'InspeksiController@showCranePH')->name('crane.ph');
     Route::get('/crane/overhead', 'InspeksiController@showCraneOverhead')->name('crane.overhead');
