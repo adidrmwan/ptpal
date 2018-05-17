@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateManagersTable extends Migration
+class CreateInspeksiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateManagersTable extends Migration
      */
     public function up()
     {
-        Schema::create('managers', function (Blueprint $table) {
+        Schema::create('inspeksi', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('departemen');
-            $table->string('divisi');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
+            $table->integer('id_user');
+            $table->string('tipe_crane');
+            $table->string('nama_mesin');
+            $table->string('bengkel');
+            $table->string('shift_hour');
+            $table->date('tgl_inspeksi');
+            $table->text('catatan');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreateManagersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('managers');
+        Schema::dropIfExists('inspeksi');
     }
 }

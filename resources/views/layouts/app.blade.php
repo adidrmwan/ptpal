@@ -56,15 +56,13 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-left">
+                            @if(Auth::guest())
                             <li><a href="/search">Browse Jobs</a></li>
-<<<<<<< HEAD
                             @else
                                 @if(Auth::user())
                                 <li><a href="/search">Browse Jobs</a></li>
                                 @endif
-                            @endif --}}
-=======
->>>>>>> user
+                            @endif
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             @if (Auth::guest())

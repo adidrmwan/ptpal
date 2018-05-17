@@ -124,19 +124,19 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Tagged crane and hoist</label>
                                                 </div>
                                                  <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_1">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_1">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_1"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -147,21 +147,21 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Control Devices</label>
                                                 </div>
                                                  <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_2">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_2">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_2"></textarea>
                                                     </div>
-                                                 </div>                                              
+                                                 </div>                                               
                                             </div>
                                         </div>
                                         <div class="row" style="padding: 15px 0;">
@@ -169,20 +169,20 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Brakes</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_3">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_3">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_3"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -192,22 +192,22 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Hook dan hook latch</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_4">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_4">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_4"></textarea>
                                                     </div>
-                                                 </div>                                              
+                                                 </div>                                             
                                             </div>
                                         </div>
                                         <div class="row" style="padding: 15px 0;">
@@ -215,22 +215,22 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Rail long travel dan rail cross travel</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_5">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_5">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_5"></textarea>
                                                     </div>
-                                                 </div>                                              
+                                                 </div>                                             
                                             </div>
                                         </div>
                                         <div class="row" style="padding: 15px 0;">
@@ -238,20 +238,20 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Wire rope</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_6">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_6">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_6"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -261,20 +261,20 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Load Chain</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_7">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_7">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_7"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -284,20 +284,20 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Reeving</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_8">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_8">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_8"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -307,20 +307,20 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Limit Switches</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_9">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_9">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_9"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -330,20 +330,20 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Pelumasan bearing, wires, gear reducers hydraulic units, dll</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_10">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_10">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_10"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -353,22 +353,22 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Fuctional switch, controller, alarm, signal indicator, voltage</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_11">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_11">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_11"></textarea>
                                                     </div>
-                                                 </div>                                              
+                                                 </div>                                               
                                             </div>
                                         </div>
                                         <div class="row" style="padding: 15px 0;">
@@ -376,22 +376,22 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Rigging</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_12">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_12">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_12"></textarea>
                                                     </div>
-                                                 </div>                                              
+                                                 </div>                                             
                                             </div>
                                         </div>
                                         <div class="row" style="padding: 15px 0;">
@@ -399,26 +399,24 @@
                                                 <div class="col-sm-4">
                                                      <label class="col-form-label" for="formGroupExampleInput">Crane Tracks</label>
                                                 </div>
-                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <div class="col-sm-4">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_13">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_13">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_13"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
-
-
 
                                         <div class="row" style="padding: 30px 0;">
                                             <div class="col-sm-12">
@@ -430,8 +428,6 @@
                                                  </div>                                              
                                             </div>
                                         </div>
-
-
 
                                          <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>

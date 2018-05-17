@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePetugasMaintenancesTable extends Migration
+class CreateMaintenanceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreatePetugasMaintenancesTable extends Migration
      */
     public function up()
     {
-        Schema::create('petugas_maintenances', function (Blueprint $table) {
+        Schema::create('maintenance', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('departemen');
-            $table->string('divisi');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
+            $table->integer('id_user');
+            $table->char('kategori', 1);
+            $table->string('problem');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreatePetugasMaintenancesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('petugas_maintenances');
+        Schema::dropIfExists('maintenance');
     }
 }

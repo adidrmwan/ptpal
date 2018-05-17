@@ -28,17 +28,6 @@
                                         </div>
                                     </div>
                                     
-<<<<<<< HEAD
-                                    <div class="form-group{{ $errors->has('departemen') ? ' has-error' : '' }}">
-                                        <label for="name" class="col-md-4 control-label">Departemen</label>
-
-                                        <div class="col-md-6">
-                                            <input id="departemen" type="text" class="form-control input-md" name="departemen" value="{{ old('departemen') }}" required autofocus>
-
-                                            @if ($errors->has('departemen'))
-                                                <span class="help-block">
-                                                    <strong>{{ $errors->first('departemen') }}</strong>
-=======
                                     <div class="form-group{{ $errors->has('department') ? ' has-error' : '' }}">
                                         <label for="department" class="col-md-4 control-label">Department</label>
 
@@ -48,7 +37,6 @@
                                             @if ($errors->has('department'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('department') }}</strong>
->>>>>>> user
                                                 </span>
                                             @endif
                                         </div>

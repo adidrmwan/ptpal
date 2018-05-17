@@ -17,26 +17,26 @@
                         <div class="panel-body">
                             {{-- <hr class="center-block small text-hr"> --}}
                             <br> 
-                            <a href="goliath">
+                            <a href="{{ route('crane.goliath') }}">
                                 <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
                                    GOLIATH 300 TON GANTRY CRANE                            
                                 </button>
                             </a>
 
                             <br>
-                            <a href="goliath">
+                            <a href="{{ route('crane.llc') }}">
                                 <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
                                     LLC CRANE
                                 </button>
                             </a>
                             <br>
-                            <a href="goliath">
+                            <a href="{{ route('crane.ph') }}">
                                 <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
                                     MOBILE CRANE / PH CRANE
                                 </button>
                             </a>
                             <br>
-                            <a href="goliath">
+                            <a href="{{ route('crane.overhead') }}">
                                 <button type="submit" class="btn btn-primary btn-border btn-block btn-lg">
                                     OVERHEAD CRANE
                                 </button>
