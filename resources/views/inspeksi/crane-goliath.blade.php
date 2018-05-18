@@ -135,7 +135,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_1" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_1"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -158,7 +158,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_2" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_2"></textarea>
                                                     </div>
                                                  </div>                                               
                                             </div>
@@ -181,7 +181,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_3" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_3"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -204,7 +204,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_4" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_4"></textarea>
                                                     </div>
                                                  </div>                                             
                                             </div>
@@ -227,7 +227,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_5" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_5"></textarea>
                                                     </div>
                                                  </div>                                             
                                             </div>
@@ -250,7 +250,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_6" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_6"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -273,7 +273,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_7" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_7"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -296,7 +296,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_8" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_8"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -319,7 +319,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_9" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_9"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -342,7 +342,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_10" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_10"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -365,7 +365,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_11" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_11"></textarea>
                                                     </div>
                                                  </div>                                               
                                             </div>
@@ -388,7 +388,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_12" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_12"></textarea>
                                                     </div>
                                                  </div>                                             
                                             </div>
@@ -411,7 +411,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_13" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_13"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -422,7 +422,7 @@
                                                  <div class="col-sm-12">
                                                     <label class="col-form-label" for="formGroupExampleInput">CATATAN TEMUAN/SARAN/KESIMPULAN</label>
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 200px; width: 670px;" name="catatan" ></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 200px; width: 670px;" name="catatan"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>

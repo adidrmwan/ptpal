@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Inspeksi;
 use App\CraneGoliath;
 use Auth;
+use PDF;
 
 class InspeksiController extends Controller
 {
@@ -15,7 +16,7 @@ class InspeksiController extends Controller
     {
         $mesin = DB::table('mesin')->get();
         // dd($mesin);
-        return view('inspeksi.goliath', ['mesin' => $mesin]);
+        return view('inspeksi.crane-goliath', ['mesin' => $mesin]);
     }
 
     public function submitCraneGoliath(Request $request)
@@ -63,22 +64,204 @@ class InspeksiController extends Controller
         $crane->checklist_12 = $request->input('checklist_12');
         $crane->checklist_13 = $request->input('checklist_13');
         $crane->save();
-        return redirect()->back();
+
+        // return view('inspeksi.print-goliath', ['crane' => $crane, 'inspeksi' => $inspeksi]);
+        return redirect()->intended(route('crane.goliath.view', $crane->id));
+    }
+
+
+    public function viewCraneGoliath($id)
+    {
+        $crane = DB::select("select * from crane_goliath where id = '$id'");
+
+        return view('inspeksi.view-goliath', ['crane' => $crane]);
+    }
+
+    public function downloadCraneGoliath()
+    {
+        $pdf = PDF::loadView('home');
+        return $pdf->download('pdf-goliath.pdf');
     }
 
     public function showCraneLLC()
     {
-        return view('inspeksi.llc');
+        $mesin = DB::table('mesin')->get();
+        return view('inspeksi.crane-llc', ['mesin' => $mesin]);
+    }
+
+    public function submitCraneLLC(Request $request)
+    {
+        $userid = Auth::user()->id;
+        $tipecrane = 'LLC';
+        $inspeksi = new Inspeksi();
+        $inspeksi->id_user = $userid;
+        $inspeksi->tipe_crane = $tipecrane;
+
+        $inspeksi->nama_mesin = $request->input('nama_mesin');
+        $inspeksi->bengkel = $request->input('bengkel');
+        $inspeksi->shift_hour = $request->input('shift_hour');
+        $inspeksi->tgl_inspeksi = $request->input('tgl_inspeksi');
+        $inspeksi->catatan = $request->input('catatan');
+
+        $inspeksi->save();
+
+        $crane = new CraneLLC();
+        $crane->id_inspeksi = $inspeksi->id;
+        $crane->ket_1 = $request->input('ket_1');
+        $crane->ket_2 = $request->input('ket_2');
+        $crane->ket_3 = $request->input('ket_3');
+        $crane->ket_4 = $request->input('ket_4');
+        $crane->ket_5 = $request->input('ket_5');
+        $crane->ket_6 = $request->input('ket_6');
+        $crane->ket_7 = $request->input('ket_7');
+        $crane->ket_8 = $request->input('ket_8');
+        $crane->ket_9 = $request->input('ket_9');
+        $crane->ket_10 = $request->input('ket_10');
+        $crane->ket_11 = $request->input('ket_11');
+        $crane->ket_12 = $request->input('ket_12');
+        $crane->ket_13 = $request->input('ket_13');
+        $crane->ket_13 = $request->input('ket_14');
+        $crane->checklist_1 = $request->input('checklist_1');
+        $crane->checklist_2 = $request->input('checklist_2');
+        $crane->checklist_3 = $request->input('checklist_3');
+        $crane->checklist_4 = $request->input('checklist_4');
+        $crane->checklist_5 = $request->input('checklist_5');
+        $crane->checklist_6 = $request->input('checklist_6');
+        $crane->checklist_7 = $request->input('checklist_7');
+        $crane->checklist_8 = $request->input('checklist_8');
+        $crane->checklist_9 = $request->input('checklist_9');
+        $crane->checklist_10 = $request->input('checklist_10');
+        $crane->checklist_11 = $request->input('checklist_11');
+        $crane->checklist_12 = $request->input('checklist_12');
+        $crane->checklist_13 = $request->input('checklist_13');
+        $crane->checklist_13 = $request->input('checklist_14');
+        $crane->save();
+
+        return redirect()->intended(route('petugas.checklist.crane'));
     }
 
     public function showCranePH()
     {
-        return view('inspeksi.ph');
+        $mesin = DB::table('mesin')->get();
+        return view('inspeksi.crane-ph', ['mesin' => $mesin]);
     }
+
+    public function submitCranePH(Request $request)
+    {
+        $userid = Auth::user()->id;
+        $tipecrane = 'PH';
+        $inspeksi = new Inspeksi();
+        $inspeksi->id_user = $userid;
+        $inspeksi->tipe_crane = $tipecrane;
+
+        $inspeksi->nama_mesin = $request->input('nama_mesin');
+        $inspeksi->bengkel = $request->input('bengkel');
+        $inspeksi->shift_hour = $request->input('shift_hour');
+        $inspeksi->tgl_inspeksi = $request->input('tgl_inspeksi');
+        $inspeksi->catatan = $request->input('catatan');
+
+        $inspeksi->save();
+
+        $crane = new CranePH();
+        $crane->id_inspeksi = $inspeksi->id;
+        $crane->ket_1 = $request->input('ket_1');
+        $crane->ket_2 = $request->input('ket_2');
+        $crane->ket_3 = $request->input('ket_3');
+        $crane->ket_4 = $request->input('ket_4');
+        $crane->ket_5 = $request->input('ket_5');
+        $crane->ket_6 = $request->input('ket_6');
+        $crane->ket_7 = $request->input('ket_7');
+        $crane->ket_8 = $request->input('ket_8');
+        $crane->ket_9 = $request->input('ket_9');
+        $crane->ket_10 = $request->input('ket_10');
+        $crane->ket_11 = $request->input('ket_11');
+        $crane->ket_12 = $request->input('ket_12');
+        $crane->ket_13 = $request->input('ket_13');
+        $crane->ket_13 = $request->input('ket_14');
+        $crane->ket_13 = $request->input('ket_15');
+        $crane->ket_13 = $request->input('ket_16');
+        $crane->checklist_1 = $request->input('checklist_1');
+        $crane->checklist_2 = $request->input('checklist_2');
+        $crane->checklist_3 = $request->input('checklist_3');
+        $crane->checklist_4 = $request->input('checklist_4');
+        $crane->checklist_5 = $request->input('checklist_5');
+        $crane->checklist_6 = $request->input('checklist_6');
+        $crane->checklist_7 = $request->input('checklist_7');
+        $crane->checklist_8 = $request->input('checklist_8');
+        $crane->checklist_9 = $request->input('checklist_9');
+        $crane->checklist_10 = $request->input('checklist_10');
+        $crane->checklist_11 = $request->input('checklist_11');
+        $crane->checklist_12 = $request->input('checklist_12');
+        $crane->checklist_13 = $request->input('checklist_13');
+        $crane->checklist_13 = $request->input('checklist_14');
+        $crane->checklist_13 = $request->input('checklist_15');
+        $crane->checklist_13 = $request->input('checklist_16');
+        $crane->save();
+
+        return redirect()->intended(route('petugas.checklist.crane'));
+    }
+
     public function showCraneOverhead()
     {
-        return view('inspeksi.overhead');
+        $mesin = DB::table('mesin')->get();
+        return view('inspeksi.crane-overhead', ['mesin' => $mesin]);
     }
+
+    public function submitCraneOverhead(Request $request)
+    {
+        $userid = Auth::user()->id;
+        $tipecrane = 'Overhead';
+        $inspeksi = new Inspeksi();
+        $inspeksi->id_user = $userid;
+        $inspeksi->tipe_crane = $tipecrane;
+
+        $inspeksi->nama_mesin = $request->input('nama_mesin');
+        $inspeksi->bengkel = $request->input('bengkel');
+        $inspeksi->shift_hour = $request->input('shift_hour');
+        $inspeksi->tgl_inspeksi = $request->input('tgl_inspeksi');
+        $inspeksi->catatan = $request->input('catatan');
+
+        $inspeksi->save();
+
+        $crane = new CraneOverhead();
+        $crane->id_inspeksi = $inspeksi->id;
+        $crane->ket_1 = $request->input('ket_1');
+        $crane->ket_2 = $request->input('ket_2');
+        $crane->ket_3 = $request->input('ket_3');
+        $crane->ket_4 = $request->input('ket_4');
+        $crane->ket_5 = $request->input('ket_5');
+        $crane->ket_6 = $request->input('ket_6');
+        $crane->ket_7 = $request->input('ket_7');
+        $crane->ket_8 = $request->input('ket_8');
+        $crane->ket_9 = $request->input('ket_9');
+        $crane->ket_10 = $request->input('ket_10');
+        $crane->ket_11 = $request->input('ket_11');
+        $crane->ket_12 = $request->input('ket_12');
+        $crane->ket_13 = $request->input('ket_13');
+        $crane->ket_13 = $request->input('ket_14');
+        $crane->ket_13 = $request->input('ket_15');
+        $crane->ket_13 = $request->input('ket_16');
+        $crane->checklist_1 = $request->input('checklist_1');
+        $crane->checklist_2 = $request->input('checklist_2');
+        $crane->checklist_3 = $request->input('checklist_3');
+        $crane->checklist_4 = $request->input('checklist_4');
+        $crane->checklist_5 = $request->input('checklist_5');
+        $crane->checklist_6 = $request->input('checklist_6');
+        $crane->checklist_7 = $request->input('checklist_7');
+        $crane->checklist_8 = $request->input('checklist_8');
+        $crane->checklist_9 = $request->input('checklist_9');
+        $crane->checklist_10 = $request->input('checklist_10');
+        $crane->checklist_11 = $request->input('checklist_11');
+        $crane->checklist_12 = $request->input('checklist_12');
+        $crane->checklist_13 = $request->input('checklist_13');
+        $crane->checklist_13 = $request->input('checklist_14');
+        $crane->checklist_13 = $request->input('checklist_15');
+        $crane->checklist_13 = $request->input('checklist_16');
+        $crane->save();
+
+        return redirect()->intended(route('petugas.checklist.crane'));
+    }
+        
     public function apdsubmit(Request $request)
     {
         return redirect()->intended(route('petugas.checklist.crane'));

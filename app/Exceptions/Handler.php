@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Exceptions;
+
 use Exception;
-use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -13,12 +13,7 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        \Illuminate\Auth\AuthenticationException::class,
-        \Illuminate\Auth\Access\AuthorizationException::class,
-        \Symfony\Component\HttpKernel\Exception\HttpException::class,
-        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
-        \Illuminate\Session\TokenMismatchException::class,
-        \Illuminate\Validation\ValidationException::class,
+        //
     ];
 
     /**
@@ -26,10 +21,10 @@ class Handler extends ExceptionHandler
      *
      * @var array
      */
-    // protected $dontFlash = [
-    //     'password',
-    //     'password_confirmation',
-    // ];
+    protected $dontFlash = [
+        'password',
+        'password_confirmation',
+    ];
 
     /**
      * Report or log an exception.
@@ -55,26 +50,4 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
-
-    protected function unauthenticated($request, AuthenticationException $exception)
-    {
-        if ($request->expectsJson()) {
-            return response()->json(['error' => 'Unauthenticated.'], 401);
-        }
-        $guard = array_get($exception->guards(), 0);
-        switch ($guard) {
-          case 'manager':
-            $login = 'manager.login';
-            break;
-          case 'petugas':
-            $login = 'petugas.login';
-            break;  
-          default:
-            $login = 'login';
-            break;
-        }
-        return redirect()->guest(route($login));
-    }
-
-
 }
