@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="main-container inner-page">
+         @include('sweet::alert')
         <div class="container">
             <div class="row clearfix">
                 <h1 class="text-center title-1"> <b> Inspeksi </b> </h1>
@@ -25,14 +26,14 @@
                                     <div class="form-group">
                                         <div class="col-sm-6" style="padding: 15px 10px;">
                                             <div class="row">
-                                                <div class="col-sm-12">
+                                                <div class="col-sm-12 col-md-12">
                                                 <label class="col-form-label" for="formGroupExampleInput">Nama Mesin</label><br>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="nama_mesin">
-                                                        <option value="0" selected="true" disabled="true">Pilih Mesin</option>
+                                                <div class="col-md-12">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="nama_mesin" required>
+                                                        <option value="">Pilih Mesin</option>
                                                     @foreach ($mesin as $listmesin)
                                                         <option value="{{$listmesin->nama_mesin}}">{{$listmesin->nama_mesin}}</option>
                                                     @endforeach
@@ -47,9 +48,9 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="bengkel">
-                                                        <option value="0" selected="true" disabled="true">Pilih Bengkel</option>
+                                                <div class="col-md-12">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="bengkel" required>
+                                                        <option value="">Pilih Bengkel</option>
                                                         @foreach ($mesin as $listmesin)
                                                         <option value="{{$listmesin->bengkel}}">{{$listmesin->bengkel}}</option>
                                                         @endforeach
@@ -64,13 +65,13 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="shift_hour">
-                                                        <option value="0" selected="true" disabled="true">Pilih Shift/Hour</option>
-                                                        <option value="1"> 1/07.00 - 09.00</option>
-                                                        <option value="2"> 2/09.00 - 11.00</option>
-                                                        <option value="3"> 3/11.00 - 13.00</option>
-                                                        <option value="4"> 4/13.00 - 15.00</option>
+                                                <div class="col-md-12">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="shift_hour" required>
+                                                        <option value="">Pilih Shift/Hour</option>
+                                                        <option value="1/07.00 - 09.00"> 1/07.00 - 09.00</option>
+                                                        <option value="2/09.00 - 11.00"> 2/09.00 - 11.00</option>
+                                                        <option value="3/11.00 - 13.00"> 3/11.00 - 13.00</option>
+                                                        <option value="4/13.00 - 15.00"> 4/13.00 - 15.00</option>
                                                     </select>
                                                 </div>                                   
                                             </div>
@@ -83,13 +84,13 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class='col-sm-6'>
+                                                <div class='col-sm-12'>
                                                     <div class="form-group">
                                                         <div class='input-group date' id='datetimepicker1'>
                                                             <span class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                             </span>
-                                                            <input type='date' class="form-control" name="tgl_inspeksi" />
+                                                            <input type='date' class="form-control" name="tgl_inspeksi" required>
                                                             
                                                         </div>
                                                     </div>
@@ -101,7 +102,13 @@
                                                 </script>
                                             </div>
                                         </div>
-
+                                        <div class="row" style="padding-bottom: 5px;">
+                                            <div class="col-sm-12">
+                                                <div class="alert alert-info">
+                                                  <strong>Perhatian!</strong> Wajib mengisi <b>kondisi</b> pada setiap unit. 
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="row" style="padding-bottom: 5px;">
                                             <div class="col-sm-12">
                                                     <div class="col-sm-4">
@@ -422,13 +429,22 @@
                                                  <div class="col-sm-12">
                                                     <label class="col-form-label" for="formGroupExampleInput">CATATAN TEMUAN/SARAN/KESIMPULAN</label>
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 200px; width: 670px;" name="catatan"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 200px; width: 670px;" name="catatan" required="Wajib disi"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
 
-                                         <button type="submit" class="btn btn-primary">Submit</button>
+                                        <div class="row" style="padding: 15px 0;">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-4">
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                         
                                     </div>
                                 </form>
 

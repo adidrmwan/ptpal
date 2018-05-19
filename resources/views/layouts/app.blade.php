@@ -25,6 +25,9 @@
     {{-- favicon --}}
     <link href="{{ URL::asset('favicon.ico') }}" rel="shortcut icon" >
     {{-- Scripts --}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    
     <script>
         paceOptions = {
             elements: true
@@ -146,6 +149,8 @@
     </div>
     {{-- /.wrapper --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
 <script src="{{ URL::asset('dist/assets/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('dist/assets/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

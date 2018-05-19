@@ -31,7 +31,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="nama_mesin">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="nama_mesin" required="">
                                                         <option value="0" selected="true" disabled="true">Pilih Mesin</option>
                                                     @foreach ($mesin as $listmesin)
                                                         <option value="{{$listmesin->nama_mesin}}">{{$listmesin->nama_mesin}}</option>
@@ -48,7 +48,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="bengkel">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="bengkel" required="">
                                                         <option value="0" selected="true" disabled="true">Pilih Bengkel</option>
                                                         @foreach ($mesin as $listmesin)
                                                         <option value="{{$listmesin->bengkel}}">{{$listmesin->bengkel}}</option>
@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="shift_hour">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="shift_hour" required="">
                                                         <option value="0" selected="true" disabled="true">Pilih Shift/Hour</option>
                                                         <option value="1"> 1/07.00 - 09.00</option>
                                                         <option value="2"> 2/09.00 - 11.00</option>

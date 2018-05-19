@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="main-container inner-page">
+        @include('sweet::alert')
         <div class="container">
             <div class="row clearfix">
                 <h1 class="text-center title-1"> <b> Inspeksi </b> </h1>

@@ -25,6 +25,8 @@ Route::group(['prefix' => 'manager', 'middleware' => ['auth', 'role:manager']], 
 
 });
 
+
+
 // Route untuk user petugas
 Route::group(['prefix' => 'petugas', 'middleware' => ['auth', 'role:petugas_checklist']], function(){
     Route::get('/', 'InspeksiController@sop')->name('petugas.home');
