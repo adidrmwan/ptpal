@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="main-container inner-page">
+
         <div class="container">
             <div class="row clearfix">
                 <h1 class="text-center title-1"> SOP </h1><br>
@@ -15,19 +16,29 @@
                         <p>SOPnya Apa Aja???</p>
                     </div>
                 </div>
-
+                @include('sweet::alert')
                 <div style="padding:15px 0; ">
                     <form role="form" method="POST" action="{{ route('petugas.apd.submit') }}">
                         {{ csrf_field() }}
-                        <input type="checkbox" name="checkbox" value="check"  />
-                        <input type="submit" name="email_submit" value="submit" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}"  />
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkbox" value="check"  /> Agree with the terms and conditions
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-9">
+                                <button type="submit" class="btn btn-primary" name="email_submit" value="submit"  onclick="if(!this.form.checkbox.checked){sweetAlert('', 'You must agree with the terms and conditions');return false}">Submit</button>
+                            </div>
+                        </div>
                     </form> 
 
-
                 </div>
-
             </div>
-            <hr class="mx-auto small text-hr">
         </div>
     </div>
 @endsection
