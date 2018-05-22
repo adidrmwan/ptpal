@@ -32,28 +32,11 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="nama_mesin" required>
-                                                        <option value="">Pilih Mesin</option>
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="kode_mesin" required>
+                                                        <option value="">Pilih Kode / Nama mesin</option>
                                                     @foreach ($mesin as $listmesin)
-                                                        <option value="{{$listmesin->nama_mesin}}">{{$listmesin->nama_mesin}}</option>
+                                                        <option value="{{$listmesin->kode_mesin}}">{{$listmesin->kode_mesin}} / {{$listmesin->nama_mesin}}</option>
                                                     @endforeach
-                                                    </select>
-                                                </div>                                   
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6" style="padding: 15px 10px;">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                <label class="col-form-label" for="formGroupExampleInput">Bengkel</label><br>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="bengkel" required>
-                                                        <option value="">Pilih Bengkel</option>
-                                                        @foreach ($mesin as $listmesin)
-                                                        <option value="{{$listmesin->bengkel}}">{{$listmesin->bengkel}}</option>
-                                                        @endforeach
                                                     </select>
                                                 </div>                                   
                                             </div>
@@ -67,11 +50,11 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <select class="form-control" id="inlineFormCustomSelectPref" name="shift_hour" required>
-                                                        <option value="">Pilih Shift/Hour</option>
-                                                        <option value="1/07.00 - 09.00"> 1/07.00 - 09.00</option>
-                                                        <option value="2/09.00 - 11.00"> 2/09.00 - 11.00</option>
-                                                        <option value="3/11.00 - 13.00"> 3/11.00 - 13.00</option>
-                                                        <option value="4/13.00 - 15.00"> 4/13.00 - 15.00</option>
+                                                        <option value="">Pilih Shift / Hour</option>
+                                                        <option value="1/07.00 - 09.00"> 1 / 07.00 - 09.00</option>
+                                                        <option value="2/09.00 - 11.00"> 2 / 09.00 - 11.00</option>
+                                                        <option value="3/11.00 - 13.00"> 3 / 11.00 - 13.00</option>
+                                                        <option value="4/13.00 - 15.00"> 4 / 13.00 - 15.00</option>
                                                     </select>
                                                 </div>                                   
                                             </div>

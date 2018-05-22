@@ -11,7 +11,7 @@ class Inspeksi extends Model
     public $timestamps = true;
     protected $fillable = [
     	'tipe_crane', 
-        'nama_mesin',
+        'kode_mesin',
     	'bengkel', 
         'shift_hour',
     	'tgl_inspeksi', 
@@ -21,7 +21,13 @@ class Inspeksi extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+
+    public function kodeMesin()
+    {
+        return $this->hasMany('App\Mesin', 'foreign_key');
     }  
+
 
     public function craneGoliath()
     {

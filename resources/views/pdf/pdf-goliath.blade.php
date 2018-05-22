@@ -6,14 +6,17 @@
     <style>
     	table {
     		width:100%;
+        font-size: 12px;
     	}
 		table, th, td {
 		    border: 1px solid black;
 		    border-collapse: collapse;
+        font-size: 12px;
 		}
 		th, td {
 		    padding: 5px;
 		    text-align: left;
+        font-size: 12px;
 		}
 	</style>
   </head>
@@ -22,25 +25,33 @@
     <div>
       <table>
       	<tr style="text-align: center;">
-      		<th colspan="3" style="text-align: center;">
+      		<th colspan="6" style="text-align: center;">
       		GOLIATH 300 TON GANTRY CRANE <br>
             PRE-OPERATIONAL INSPECTION CHECKLIST <br>
             (CHECKLIST INSPEKSI HARIAN SEBELUM PENGGOPERASIAN CRANE)
             </th>
         </tr>
         <tr>
-        	<th><span>Nama Mesin : </span>{{$data->nama_mesin}}</th>
-        	<th><span>Bengkel : </span>{{$data->bengkel}}</th>
-        	<th><span>Departemen : </span>{{$data->department}}</th>
+        	<th><span>Nama Mesin</span></th>
+          <td>{{$data->nama_mesin}}</td>
+        	<th><span>Bengkel</span></th>
+          <td>{{$data->bengkel}}</td>
+        	<th><span>Departemen</span></th>
+          <td>{{$data->department}}</td>
         </tr>
         <tr>
-        	<th><span>Kode Mesin : </span>{{$data->kode_mesin}}</th>
-        	<th><span>Hari/Tanggal : </span>{{$data->tgl_inspeksi}}</th>
-        	<th><span>Divisi : </span>{{$data->divisi}}</th>
+        	<th><span>Kode Mesin</span></th>
+          <td>{{$data->kode_mesin}}</td>
+        	<th><span>Hari/Tanggal</span></th>
+          <td>{{$data->tgl_inspeksi}}</td>
+        	<th><span>Divisi</span></th>
+          <td>{{$data->divisi}}</td>
         </tr>
         <tr>
-        	<th><span>Shift/Hour : </span>{{$data->shift_hour}}</th>
-        	<th colspan="2"><span>Operator/Petugas : </span>{{$data->name}}</th>
+        	<th><span>Shift/Hour</span></th>
+          <td>{{$data->shift_hour}}</td>
+        	<th colspan="2"><span>Operator/Petugas</span></th>
+          <td colspan="2">{{$data->name}}</td>
         </tr>
       </table>
 

@@ -9,9 +9,12 @@
         <div class="container">
             <div class="row clearfix">
                 <div class="row">
-                    <div class="col-xs-9">
-                        <a href="{{action('PdfGenerateController@pdfviewGoliath', $data->id_inspeksi)}}" class="btn btn-primary">Download as PDF</a>
+                    <div class="col-xs-6">
+                        <a href="{{action('PdfGenerateController@pdfviewOverhead', $data->id_inspeksi)}}" class="btn btn-primary">Download as PDF</a>
                         <a href="{{ route('petugas.home') }}" class="btn btn-primary">Back to Home</a>
+                    </div>
+                    <div class="col-xs-4">
+                        
                     </div>
                      <div style="clear:both">
                     <hr>
@@ -28,7 +31,7 @@
                                         <table class="table table-bordered">
                                             <tr style="text-align: center;">
                                                 <th colspan="6" style="text-align: center;">
-                                                GOLIATH 300 TON GANTRY CRANE <br>
+                                                OVERHEAD CRANE <br>
                                                 PRE-OPERATIONAL INSPECTION CHECKLIST <br>
                                                 (CHECKLIST INSPEKSI HARIAN SEBELUM PENGGOPERASIAN CRANE)
                                                 </th>
@@ -67,7 +70,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">1</td>
-                                                <td>Tagged crane and hoist</td>
+                                                <td>Saklar tombol tekan, saklar magnet, saklar pembatas gerak</td>
                                                 @if($data->checklist_1 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -77,7 +80,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">2</td>
-                                                <td>Control Devices</td>
+                                                <td>Kabel</td>
                                                 @if($data->checklist_2 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -87,7 +90,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">3</td>
-                                                <td>Brakes</td>
+                                                <td>Rem (Brake)</td>
                                                 @if($data->checklist_3 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -97,7 +100,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">4</td>
-                                                <td>Hook dan hook latch</td>
+                                                <td>Tali angkat beban ( utama dan tambahan )</td>
                                                 @if($data->checklist_4 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -107,7 +110,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">5</td>
-                                                <td>Rail long travel dan rail cross travel</td>
+                                                <td>Blok beban utama, tambahan</td>
                                                 @if($data->checklist_5 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -117,7 +120,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">6</td>
-                                                <td>Wire rope</td>
+                                                <td>Pancing utama, tambahan</td>
                                                 @if($data->checklist_6 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -127,7 +130,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">7</td>
-                                                <td>Load Chain</td>
+                                                <td>Puli Penghantar</td>
                                                 @if($data->checklist_7 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -137,7 +140,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="width: 2%;">8</td>
-                                                <td>Reeving</td>
+                                                <td>Kerangka</td>
                                                 @if($data->checklist_8 == 1)
                                                     <td style="text-align: center;">Baik</td>
                                                 @else
@@ -147,7 +150,7 @@
                                             </tr>
                                             <tr>
                                               <td style="width: 2%;">9</td>
-                                              <td>Limit Switches</td>
+                                              <td>Kolektor</td>
                                               @if($data->checklist_9 == 1)
                                                 <td style="text-align: center;">Baik</td>
                                               @else
@@ -157,7 +160,7 @@
                                             </tr>
                                             <tr>
                                               <td style="width: 2%;">10</td>
-                                              <td>Pelumasan bearing, wires, gear reducers hydraulic units, dll</td>
+                                              <td>Kabel Penghantar</td>
                                               @if($data->checklist_10 == 1)
                                                 <td style="text-align: center;">Baik</td>
                                               @else
@@ -167,7 +170,7 @@
                                             </tr>
                                             <tr>
                                               <td style="width: 2%;">11</td>
-                                              <td>Fuctional switch, controller, alarm, signal indicator, voltage</td>
+                                              <td>Girder</td>
                                               @if($data->checklist_11 == 1)
                                                 <td style="text-align: center;">Baik</td>
                                               @else
@@ -177,7 +180,7 @@
                                             </tr>
                                             <tr>
                                               <td style="width: 2%;">12</td>
-                                              <td>Rigging</td>
+                                              <td>Trolley</td>
                                               @if($data->checklist_12 == 1)
                                                 <td style="text-align: center;">Baik</td>
                                               @else
@@ -187,13 +190,43 @@
                                             </tr>
                                             <tr>
                                               <td style="width: 2%;">13</td>
-                                              <td>Crane Tracks</td>
+                                              <td>Bogie</td>
                                               @if($data->checklist_13 == 1)
                                                 <td style="text-align: center;">Baik</td>
                                               @else
                                                 <td style="text-align: center;">Tidak Baik</td>
                                               @endif
                                               <td>{{$data->ket_13}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="width: 2%;">14</td>
+                                              <td>Balok I ( I Beam )</td>
+                                              @if($data->checklist_14 == 1)
+                                                <td style="text-align: center;">Baik</td>
+                                              @else
+                                                <td style="text-align: center;">Tidak Baik</td>
+                                              @endif
+                                              <td>{{$data->ket_14}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="width: 2%;">15</td>
+                                              <td>Hoist, trolley, girder, bogie, trunion, tali angkat, axle, dll</td>
+                                              @if($data->checklist_15 == 1)
+                                                <td style="text-align: center;">Baik</td>
+                                              @else
+                                                <td style="text-align: center;">Tidak Baik</td>
+                                              @endif
+                                              <td>{{$data->ket_15}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="width: 2%;">16</td>
+                                              <td>Area Kerja Aman</td>
+                                              @if($data->checklist_16 == 1)
+                                                <td style="text-align: center;">Baik</td>
+                                              @else
+                                                <td style="text-align: center;">Tidak Baik</td>
+                                              @endif
+                                              <td>{{$data->ket_16}}</td>
                                             </tr>
                                             <tr>
                                               <td colspan="4"><b>CATATAN TEMUAN/SARAN/KESIMPULAN</b>

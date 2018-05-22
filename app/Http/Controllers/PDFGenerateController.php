@@ -17,14 +17,65 @@ class PdfGenerateController extends Controller
         $users = DB::table('inspeksi')
             ->join('users', 'users.id', '=', 'inspeksi.id_user')
             ->join('crane_goliath', 'crane_goliath.id_inspeksi', '=', 'inspeksi.id')
-            ->join('mesin', 'inspeksi.nama_mesin', '=', 'mesin.nama_mesin')
+            ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
             ->where('inspeksi.id', $id)
             ->where('inspeksi.id_user', $authuser->id)
-            ->select('users.name', 'users.department', 'users.divisi', 'crane_goliath.*', 'inspeksi.*', 'mesin.kode_mesin')
+            ->select('users.name', 'users.department', 'users.divisi', 'crane_goliath.*', 'inspeksi.*', 'mesin.*')
             ->get();
         // dd($users);
-        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-        $pdf = PDF::loadView('pdf.pdf', compact('users'));
-        return $pdf->download('pdfview.pdf');
+        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
+        $pdf = PDF::loadView('pdf.pdf-goliath', compact('users'));
+        return $pdf->download('print_goliath.pdf');
+    }
+
+    public function pdfviewLLC($id)
+    {
+        $authuser = Auth::user();
+        $users = DB::table('inspeksi')
+            ->join('users', 'users.id', '=', 'inspeksi.id_user')
+            ->join('crane_llc', 'crane_llc.id_inspeksi', '=', 'inspeksi.id')
+            ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
+            ->where('inspeksi.id', $id)
+            ->where('inspeksi.id_user', $authuser->id)
+            ->select('users.name', 'users.department', 'users.divisi', 'crane_llc.*', 'inspeksi.*', 'mesin.*')
+            ->get();
+        // dd($users);
+        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
+        $pdf = PDF::loadView('pdf.pdf-llc', compact('users'));
+        return $pdf->download('print_llc.pdf');
+    }
+
+    public function pdfviewOverhead($id)
+    {
+        $authuser = Auth::user();
+        $users = DB::table('inspeksi')
+            ->join('users', 'users.id', '=', 'inspeksi.id_user')
+            ->join('crane_overhead', 'crane_overhead.id_inspeksi', '=', 'inspeksi.id')
+            ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
+            ->where('inspeksi.id', $id)
+            ->where('inspeksi.id_user', $authuser->id)
+            ->select('users.name', 'users.department', 'users.divisi', 'crane_overhead.*', 'inspeksi.*', 'mesin.*')
+            ->get();
+        // dd($users);
+        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
+        $pdf = PDF::loadView('pdf.pdf-overhead', compact('users'));
+        return $pdf->download('print_overhead.pdf');
+    }
+
+    public function pdfviewPH($id)
+    {
+        $authuser = Auth::user();
+        $users = DB::table('inspeksi')
+            ->join('users', 'users.id', '=', 'inspeksi.id_user')
+            ->join('crane_ph', 'crane_ph.id_inspeksi', '=', 'inspeksi.id')
+            ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
+            ->where('inspeksi.id', $id)
+            ->where('inspeksi.id_user', $authuser->id)
+            ->select('users.name', 'users.department', 'users.divisi', 'crane_ph.*', 'inspeksi.*', 'mesin.*')
+            ->get();
+        // dd($users);
+        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
+        $pdf = PDF::loadView('pdf.pdf-ph', compact('users'));
+        return $pdf->download('print_ph.pdf');
     }
 }

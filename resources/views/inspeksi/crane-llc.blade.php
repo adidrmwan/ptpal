@@ -4,14 +4,14 @@
 
 @section('content')
     <div class="main-container inner-page">
-        @include('sweet::alert')
+         @include('sweet::alert')
         <div class="container">
             <div class="row clearfix">
                 <h1 class="text-center title-1"> <b> Inspeksi </b> </h1>
                 <h2 class="text-center title-1">
-                   LLC CRANE <br>
-                    PRE-OPERATIONAL INSPECTION CHECKLIST <br>
-                    (CHECKLIST INSPEKSI HARIAN SEBELUM PENGGOPERASIAN CRANE)
+                LLC CRANE <br>
+                PRE-OPERATIONAL INSPECTION CHECKLIST <br>
+                (CHECKLIST INSPEKSI HARIAN SEBELUM PENGGOPERASIAN CRANE)
                 </h2>
                 <div style="clear:both">
                     <hr>
@@ -26,36 +26,19 @@
                                     <div class="form-group">
                                         <div class="col-sm-6" style="padding: 15px 10px;">
                                             <div class="row">
-                                                <div class="col-sm-12">
+                                                <div class="col-sm-12 col-md-12">
                                                 <label class="col-form-label" for="formGroupExampleInput">Nama Mesin</label><br>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="nama_mesin">
-                                                        <option value="0" selected="true" disabled="true">Pilih Mesin</option>
+                                                <div class="col-md-12">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="kode_mesin" required>
+                                                        <option value="">Pilih Kode / Nama mesin</option>
                                                     @foreach ($mesin as $listmesin)
-                                                        <option value="{{$listmesin->nama_mesin}}">{{$listmesin->nama_mesin}}</option>
+                                                        <option value="{{$listmesin->kode_mesin}}">{{$listmesin->kode_mesin}} / {{$listmesin->nama_mesin}}</option>
                                                     @endforeach
                                                     </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6" style="padding: 15px 10px;">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                <label class="col-form-label" for="formGroupExampleInput">Bengkel</label><br>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="bengkel">
-                                                        <option value="0" selected="true" disabled="true">Pilih Bengkel</option>
-                                                        @foreach ($mesin as $listmesin)
-                                                        <option value="{{$listmesin->bengkel}}">{{$listmesin->bengkel}}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
+                                                </div>                                   
                                             </div>
                                         </div>
                                         <div class="col-sm-6" style="padding: 15px 10px;">
@@ -65,17 +48,16 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="shift_hour">
-                                                        <option value="0" selected="true" disabled="true">Pilih Shift/Hour</option>
-                                                        <option value="1"> 1/07.00 - 09.00</option>
-                                                        <option value="2"> 2/09.00 - 11.00</option>
-                                                        <option value="3"> 3/11.00 - 13.00</option>
-                                                        <option value="4"> 4/13.00 - 15.00</option>
+                                                <div class="col-md-12">
+                                                    <select class="form-control" id="inlineFormCustomSelectPref" name="shift_hour" required>
+                                                        <option value="">Pilih Shift / Hour</option>
+                                                        <option value="1/07.00 - 09.00"> 1 / 07.00 - 09.00</option>
+                                                        <option value="2/09.00 - 11.00"> 2 / 09.00 - 11.00</option>
+                                                        <option value="3/11.00 - 13.00"> 3 / 11.00 - 13.00</option>
+                                                        <option value="4/13.00 - 15.00"> 4 / 13.00 - 15.00</option>
                                                     </select>
-                                                </div>    
+                                                </div>                                   
                                             </div>
-                                        </div>
                                         </div>
                                         <div class="col-sm-6" style="padding: 15px 10px;">
                                            
@@ -85,13 +67,13 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class='col-sm-6'>
+                                                <div class='col-sm-12'>
                                                     <div class="form-group">
                                                         <div class='input-group date' id='datetimepicker1'>
                                                             <span class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                             </span>
-                                                            <input type='date' class="form-control" name="tgl_inspeksi" />
+                                                            <input type='date' class="form-control" name="tgl_inspeksi" required>
                                                             
                                                         </div>
                                                     </div>
@@ -103,7 +85,13 @@
                                                 </script>
                                             </div>
                                         </div>
-
+                                        <div class="row" style="padding-bottom: 5px;">
+                                            <div class="col-sm-12">
+                                                <div class="alert alert-info">
+                                                  <strong>Perhatian!</strong> Wajib mengisi <b>kondisi</b> pada setiap unit. 
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="row" style="padding-bottom: 5px;">
                                             <div class="col-sm-12">
                                                     <div class="col-sm-4">
@@ -137,7 +125,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_1" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_1"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -160,7 +148,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_2" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_2"></textarea>
                                                     </div>
                                                  </div>                                               
                                             </div>
@@ -183,7 +171,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_3" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_3"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
@@ -206,7 +194,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_4" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_4"></textarea>
                                                     </div>
                                                  </div>                                             
                                             </div>
@@ -229,7 +217,7 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_5" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_5"></textarea>
                                                     </div>
                                                  </div>                                             
                                             </div>
@@ -252,12 +240,11 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_6" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_6"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
-                                        <!-- Tegangan Kabel power -->
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -276,12 +263,11 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_7" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_7"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
-                                        <!-- Function limit anticollition -->
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -300,12 +286,11 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_8" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_8"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
-                                        <!-- Motor dan gearbox travel -->
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -324,12 +309,11 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_9" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_9"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
-                                        <!-- Functional -->
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -348,12 +332,11 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_10" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_10"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
-                                        <!-- Electric device ( emergency stop, AC, dll ) -->
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -372,12 +355,11 @@
                                                   </div>
                                                  <div class="col-sm-4">
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_11" required=""></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 100px; width: 300px;" name="ket_11"></textarea>
                                                     </div>
                                                  </div>                                               
                                             </div>
                                         </div>
-                                        <!-- Boom -->
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -401,7 +383,6 @@
                                                  </div>                                             
                                             </div>
                                         </div>
-                                        <!-- Fungsi Gerakan -->
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -425,7 +406,7 @@
                                                  </div>                                              
                                             </div>
                                         </div>
-                                        <!-- Pelumasan Pedestal Gear -->
+
                                         <div class="row" style="padding: 15px 0;">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
@@ -450,22 +431,27 @@
                                             </div>
                                         </div>
 
-
-
                                         <div class="row" style="padding: 30px 0;">
                                             <div class="col-sm-12">
                                                  <div class="col-sm-12">
                                                     <label class="col-form-label" for="formGroupExampleInput">CATATAN TEMUAN/SARAN/KESIMPULAN</label>
                                                     <div class="input-group">
-                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 200px; width: 670px;" name="catatan"></textarea>
+                                                      <textarea class="form-control" aria-label="With textarea" style="resize: none; height: 200px; width: 670px;" name="catatan" required="Wajib disi"></textarea>
                                                     </div>
                                                  </div>                                              
                                             </div>
                                         </div>
 
-
-
-                                         <button type="submit" class="btn btn-primary">Submit</button>
+                                        <div class="row" style="padding: 15px 0;">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-4">
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                         
                                     </div>
                                 </form>
 
