@@ -1,21 +1,29 @@
 <?php
 
 Route::get('/', function () {
+    
+    if(Auth::check()) {
+    
     $user = Auth::user();
+    
     $userrole = DB::select("select role_id from role_user where user_id = '$user->id'");
-    if ( $userrole = 2 ) {
-       return redirect()->route('petugas.home');
+        if ( $userrole = 2 ) {
+           return redirect()->route('petugas.home');
+        }
+        elseif ( $userrole = 1 ) {
+           return redirect()->route('manager.home');
+        }
+
     }
-    elseif ( $userrole = 1 ) {
-       return redirect()->route('manager.home');
-    }
-    return view('home');
+
+    return view('home');     
+    
 });
 
 //------------------------User's login-------------------------
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'hash(algo, data)omeController@index')->name('home');
 
 // Route untuk user yang baru register
 Route::group(['prefix' => 'home', 'middleware' => ['auth']], function(){
@@ -27,7 +35,7 @@ Route::group(['prefix' => 'home', 'middleware' => ['auth']], function(){
 
 // Route untuk user manager
 Route::group(['prefix' => 'manager', 'middleware' => ['auth', 'role:manager']], function(){
-    Route::get('/', 'InspeksiController@sop')->name('petugas.home');
+    Route::get('/', 'InspeksiController@sop')->name('manager.home');
 
 });
 

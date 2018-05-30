@@ -56,10 +56,10 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-left">
                             {{-- @if(Auth::guest())
-                            <li><a href="/search">Browse Jobs</a></li>
+                            
                             @else
                                 @if(Auth::user())
-                                <li><a href="/search">Browse Jobs</a></li>
+                            
                                 @endif
                             @endif --}}
                         </ul>

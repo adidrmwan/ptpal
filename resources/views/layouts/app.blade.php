@@ -60,10 +60,10 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-left">
                             @if(Auth::guest())
-                            <li><a href="/search">Browse Jobs</a></li>
+                            
                             @else
                                 @if(Auth::user())
-                                <li><a href="/search">Browse Jobs</a></li>
+                                <!-- <li><a href="/search">Browse Jobs</a></li> -->
                                 @endif
                             @endif
                         </ul>
@@ -71,7 +71,7 @@
                             @if (Auth::guest())
                                 <li><a href="/login">Masuk</a></li>
                                 <li><a href="/register">Daftar</a></li>
-                                {{-- <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/job/create">Post A Job</a></li> --}}
+                                <!-- {{-- <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/job/create">Post A Job</a></li> --}} -->
                             @else
                                 <li>
                                     <a href="{{ route('logout') }}"
@@ -84,7 +84,7 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="icon-user fa"></i> <i
                                         class=" icon-down-open-big fa"></i></a>
                                         @if(Auth::user())
@@ -107,7 +107,7 @@
                                             <li><a href="/saved"><i class="icon-heart"></i> Saved Search </a></li>
                                         </ul>
                                         @endif
-                                </li>
+                                </li> -->
                                {{--  @if(Auth::guest())
                                     <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/job/create">Post A Job</a></li>
                                 @else

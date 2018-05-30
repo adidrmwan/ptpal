@@ -24,7 +24,7 @@
                             <div class="col-xs-6">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="checkbox" value="check"  /> Agree with the terms and conditions
+                                        <input type="checkbox" name="checkbox" value="check"  /> Apakah sudah memakai APD ?
                                     </label>
                                 </div>
                             </div>
