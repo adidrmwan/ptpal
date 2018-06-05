@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <a href="{{action('PdfGenerateController@pdfviewOverhead', $data->id_inspeksi)}}" class="btn btn-primary">Download as PDF</a>
-                        <a href="{{ route('petugas.home') }}" class="btn btn-primary">Back to Home</a>
+                        <a href="{{ route('index') }}" class="btn btn-primary">Back to Home</a>
                     </div>
                     <div class="col-xs-4">
                         
@@ -42,22 +42,20 @@
                                                 <td>{{$data->nama_mesin}}</td>
                                                 <th>Bengkel</th>
                                                 <td>{{$data->bengkel}}</td>
-                                                <th>Departemen</th>
-                                                <td>{{$data->department}}</td>
+                                                <th>Hari/Tanggal</th>
+                                                <td>{{$data->tgl_inspeksi}}</td>
                                             </tr>
                                             <tr>
                                                 <th>Kode Mesin</th>
                                                 <td>{{$data->kode_mesin}}</td>
-                                                <th>Hari/Tanggal</th>
-                                                <td>{{$data->tgl_inspeksi}}</td>
+                                                <th>Shift/Hour</th>
+                                                <td>{{$data->shift_hour}}</td>
                                                 <th>Divisi</th>
                                                 <td>{{$data->divisi}}</td>
                                             </tr>
                                             <tr>
-                                                <th>Shift/Hour</th>
-                                                <td>{{$data->shift_hour}}</td>
-                                                <th colspan="2">Operator/Petugas</th>
-                                                <td colspan="2">{{$data->name}}</td>
+                                                <th colspan="3">Operator/Petugas</th>
+                                                <td colspan="3">{{$data->name}}</td>
                                             </tr>
                                         </table>
 

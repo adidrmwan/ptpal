@@ -1,41 +1,36 @@
 <?php
+Auth::routes();
+Route::get('/home', 'HomeController@home')->name('home');
 
 Route::get('/', function () {
     
-    if(Auth::check()) {
-    
-    $user = Auth::user();
-    
-    $userrole = DB::select("select role_id from role_user where user_id = '$user->id'");
-        if ( $userrole = 2 ) {
-           return redirect()->route('petugas.home');
+    if(Auth::check()) {    
+        $user = Auth::user();
+        $userrole = DB::table('role_user')
+                    ->where('user_id', $user->id)
+                    ->select('role_id')
+                    ->first();
+        if ( $userrole->role_id == '1' ) {
+               return redirect()->route('manager.home');
         }
-        elseif ( $userrole = 1 ) {
-           return redirect()->route('manager.home');
-        }
-
+        elseif ( $userrole->role_id == '2' ) {
+               return redirect()->route('petugas.home');
+        }      
     }
 
-    return view('home');     
+    return view('home');       
     
-});
+})->name('index');
 
 //------------------------User's login-------------------------
-Auth::routes();
-
-Route::get('/home', 'hash(algo, data)omeController@index')->name('home');
-
-// Route untuk user yang baru register
-Route::group(['prefix' => 'home', 'middleware' => ['auth']], function(){
-    Route::get('/', function(){
-        return view('home');
-    });
-
-});
 
 // Route untuk user manager
 Route::group(['prefix' => 'manager', 'middleware' => ['auth', 'role:manager']], function(){
-    Route::get('/', 'InspeksiController@sop')->name('manager.home');
+    Route::get('/', 'MaintenanceController@reportinspeksi')->name('manager.home');
+    Route::get('/view/goliath/{id}', 'InspeksiController@viewCraneGoliath')->name('view.goliath');
+    Route::get('/view/llc/{id}', 'InspeksiController@viewCraneLLC')->name('view.llc');
+    Route::get('/view/ph/{id}', 'InspeksiController@viewCranePH')->name('view.ph');
+    Route::get('/view/overhead/{id}', 'InspeksiController@viewCraneOverhead')->name('view.overhead');
 
 });
 
@@ -47,27 +42,29 @@ Route::group(['prefix' => 'petugas', 'middleware' => ['auth', 'role:petugas_chec
     Route::post('/a', 'InspeksiController@apdsubmit')->name('petugas.apd.submit');
     Route::get('/crane', 'ChecklistController@crane')->name('petugas.checklist.crane');
     // goliath crane
-    Route::get('/crane/goliath', 'InspeksiController@showCraneGoliath')->name('crane.goliath');
-    Route::post('/crane/goliath', 'InspeksiController@submitCraneGoliath')->name('crane.goliath.submit');
-    Route::get('/crane/goliath/{id}', 'InspeksiController@viewCraneGoliath')->name('crane.goliath.view');
+    Route::get('/crane/goliath', 'ChecklistController@showCraneGoliath')->name('crane.goliath');
+    Route::post('/crane/goliath', 'ChecklistController@submitCraneGoliath')->name('crane.goliath.submit');
+    Route::get('/crane/goliath/{id}', 'ChecklistController@viewCraneGoliath')->name('crane.goliath.view');
     // llc crane
-    Route::get('/crane/llc', 'InspeksiController@showCraneLLC')->name('crane.llc');
-    Route::post('/crane/llc', 'InspeksiController@submitCraneLLC')->name('crane.llc.submit');
-    Route::get('/crane/llc/{id}', 'InspeksiController@viewCraneLLC')->name('crane.llc.view');
+    Route::get('/crane/llc', 'ChecklistController@showCraneLLC')->name('crane.llc');
+    Route::post('/crane/llc', 'ChecklistController@submitCraneLLC')->name('crane.llc.submit');
+    Route::get('/crane/llc/{id}', 'ChecklistController@viewCraneLLC')->name('crane.llc.view');
     // ph crane
-    Route::get('/crane/ph', 'InspeksiController@showCranePH')->name('crane.ph');
-    Route::post('/crane/ph', 'InspeksiController@submitCranePH')->name('crane.ph.submit');
-    Route::get('/crane/ph/{id}', 'InspeksiController@viewCranePH')->name('crane.ph.view');
+    Route::get('/crane/ph', 'ChecklistController@showCranePH')->name('crane.ph');
+    Route::post('/crane/ph', 'ChecklistController@submitCranePH')->name('crane.ph.submit');
+    Route::get('/crane/ph/{id}', 'ChecklistController@viewCranePH')->name('crane.ph.view');
     // overhead crane
-    Route::get('/crane/overhead', 'InspeksiController@showCraneOverhead')->name('crane.overhead');
-    Route::post('/crane/overhead', 'InspeksiController@submitCraneOverhead')->name('crane.overhead.submit');
-    Route::get('/crane/overhead/{id}', 'InspeksiController@viewCraneOverhead')->name('crane.overhead.view');
+    Route::get('/crane/overhead', 'ChecklistController@showCraneOverhead')->name('crane.overhead');
+    Route::post('/crane/overhead', 'ChecklistController@submitCraneOverhead')->name('crane.overhead.submit');
+    Route::get('/crane/overhead/{id}', 'ChecklistController@viewCraneOverhead')->name('crane.overhead.view');
     // download as pdf
-    Route::get('/generate-pdf-goliath/{id}', 'PdfGenerateController@pdfviewGoliath')->name('generate-pdf.goliath');
-    Route::get('/generate-pdf-llc/{id}', 'PdfGenerateController@pdfviewLLC')->name('generate-pdf.llc');
-    Route::get('/generate-pdf-ph/{id}', 'PdfGenerateController@pdfviewPH')->name('generate-pdf.ph');
-    Route::get('/generate-pdf-overhead/{id}', 'PdfGenerateController@pdfviewOverhead')->name('generate-pdf.overhead');
+    
 });
+
+Route::get('/generate-pdf-goliath/{id}', 'PdfGenerateController@pdfviewGoliath')->name('generate-pdf.goliath');
+Route::get('/generate-pdf-llc/{id}', 'PdfGenerateController@pdfviewLLC')->name('generate-pdf.llc');
+Route::get('/generate-pdf-ph/{id}', 'PdfGenerateController@pdfviewPH')->name('generate-pdf.ph');
+Route::get('/generate-pdf-overhead/{id}', 'PdfGenerateController@pdfviewOverhead')->name('generate-pdf.overhead');
 
 Route::get('/divisi', 'InspeksiController@index');
 

@@ -32,27 +32,25 @@
             </th>
         </tr>
         <tr>
-        	<th><span>Nama Mesin</span></th>
-          <td>{{$data->nama_mesin}}</td>
-        	<th><span>Bengkel</span></th>
-          <td>{{$data->bengkel}}</td>
-        	<th><span>Departemen</span></th>
-          <td>{{$data->department}}</td>
-        </tr>
-        <tr>
-        	<th><span>Kode Mesin</span></th>
-          <td>{{$data->kode_mesin}}</td>
-        	<th><span>Hari/Tanggal</span></th>
-          <td>{{$data->tgl_inspeksi}}</td>
-        	<th><span>Divisi</span></th>
-          <td>{{$data->divisi}}</td>
-        </tr>
-        <tr>
-        	<th><span>Shift/Hour</span></th>
-          <td>{{$data->shift_hour}}</td>
-        	<th colspan="2"><span>Operator/Petugas</span></th>
-          <td colspan="2">{{$data->name}}</td>
-        </tr>
+                                                <th>Nama Mesin</th>
+                                                <td>{{$data->nama_mesin}}</td>
+                                                <th>Bengkel</th>
+                                                <td>{{$data->bengkel}}</td>
+                                                <th>Hari/Tanggal</th>
+                                                <td>{{$data->tgl_inspeksi}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Kode Mesin</th>
+                                                <td>{{$data->kode_mesin}}</td>
+                                                <th>Shift/Hour</th>
+                                                <td>{{$data->shift_hour}}</td>
+                                                <th>Divisi</th>
+                                                <td>{{$data->divisi}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="3">Operator/Petugas</th>
+                                                <td colspan="3">{{$data->name}}</td>
+                                            </tr>
       </table>
 
       <table>

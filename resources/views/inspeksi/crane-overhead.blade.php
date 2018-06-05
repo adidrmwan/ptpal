@@ -113,12 +113,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Saklar tombol tekan, saklar magnet, saklar pembatas gerak</label>
                                                 </div>
                                                  <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_1">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_1" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_1">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_1">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -136,12 +136,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Kabel</label>
                                                 </div>
                                                  <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_2">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_2" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_2">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_2">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -159,12 +159,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Rem (Brake)</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_3">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_3" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_3">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_3">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -182,12 +182,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Tali angkat beban ( utama dan tambahan )</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_4">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_4" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_4">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_4">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -205,12 +205,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Blok beban utama, tambahan</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_5">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_5" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_5">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_5">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -228,12 +228,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Pancing utama, tambahan</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_6">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_6" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_6">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_6">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -251,12 +251,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Puli Penghantar</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_7">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_7" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_7">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_7">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -274,12 +274,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Kerangka</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_8">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_8" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_8">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_8">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -297,12 +297,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Kolektor</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_9">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_9" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_9">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_9">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -320,12 +320,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Kabel Penghantar</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_10">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_10" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_10">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_10">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -343,12 +343,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Girder</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_11">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_11" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_11">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_11">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -366,12 +366,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Trolley</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_12">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_12" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_12">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_12">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -389,12 +389,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Bogie</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_13">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_13" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_13">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_13">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -412,12 +412,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Balok I ( I Beam )</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_14">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_14" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_14">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_14">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -435,12 +435,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Hoist, trolley, girder, bogie, trunion, tali angkat, axle, dll</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_15">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_15" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_15">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_15">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>
@@ -459,12 +459,12 @@
                                                      <label class="col-form-label" for="formGroupExampleInput">Area Kerja Aman</label>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="checklist_16">
+                                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="checklist_16" required>
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Baik
                                                     </label> &nbsp; &nbsp; &nbsp; &nbsp;
                                                     
-                                                    <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" name="checklist_16">
+                                                    <input class="form-check-input" type="radio" value="0" id="defaultCheck1" name="checklist_16">
                                                     <label class="form-check-label" for="defaultCheck1">
                                                         Tidak Baik
                                                       </label>

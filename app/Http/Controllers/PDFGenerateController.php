@@ -13,14 +13,12 @@ class PdfGenerateController extends Controller
 {
     public function pdfviewGoliath($id)
     {
-        $authuser = Auth::user();
         $users = DB::table('inspeksi')
             ->join('users', 'users.id', '=', 'inspeksi.id_user')
             ->join('crane_goliath', 'crane_goliath.id_inspeksi', '=', 'inspeksi.id')
             ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
             ->where('inspeksi.id', $id)
-            ->where('inspeksi.id_user', $authuser->id)
-            ->select('users.name', 'users.department', 'users.divisi', 'crane_goliath.*', 'inspeksi.*', 'mesin.*')
+            ->select('users.name', 'users.divisi', 'crane_goliath.*', 'inspeksi.*', 'mesin.*')
             ->get();
         // dd($users);
         PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
@@ -30,14 +28,12 @@ class PdfGenerateController extends Controller
 
     public function pdfviewLLC($id)
     {
-        $authuser = Auth::user();
         $users = DB::table('inspeksi')
             ->join('users', 'users.id', '=', 'inspeksi.id_user')
             ->join('crane_llc', 'crane_llc.id_inspeksi', '=', 'inspeksi.id')
             ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
             ->where('inspeksi.id', $id)
-            ->where('inspeksi.id_user', $authuser->id)
-            ->select('users.name', 'users.department', 'users.divisi', 'crane_llc.*', 'inspeksi.*', 'mesin.*')
+            ->select('users.name', 'users.divisi', 'crane_llc.*', 'inspeksi.*', 'mesin.*')
             ->get();
         // dd($users);
         PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
@@ -47,14 +43,12 @@ class PdfGenerateController extends Controller
 
     public function pdfviewOverhead($id)
     {
-        $authuser = Auth::user();
         $users = DB::table('inspeksi')
             ->join('users', 'users.id', '=', 'inspeksi.id_user')
             ->join('crane_overhead', 'crane_overhead.id_inspeksi', '=', 'inspeksi.id')
             ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
             ->where('inspeksi.id', $id)
-            ->where('inspeksi.id_user', $authuser->id)
-            ->select('users.name', 'users.department', 'users.divisi', 'crane_overhead.*', 'inspeksi.*', 'mesin.*')
+            ->select('users.name', 'users.divisi', 'crane_overhead.*', 'inspeksi.*', 'mesin.*')
             ->get();
         // dd($users);
         PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
@@ -64,14 +58,12 @@ class PdfGenerateController extends Controller
 
     public function pdfviewPH($id)
     {
-        $authuser = Auth::user();
         $users = DB::table('inspeksi')
             ->join('users', 'users.id', '=', 'inspeksi.id_user')
             ->join('crane_ph', 'crane_ph.id_inspeksi', '=', 'inspeksi.id')
             ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
             ->where('inspeksi.id', $id)
-            ->where('inspeksi.id_user', $authuser->id)
-            ->select('users.name', 'users.department', 'users.divisi', 'crane_ph.*', 'inspeksi.*', 'mesin.*')
+            ->select('users.name', 'users.divisi', 'crane_ph.*', 'inspeksi.*', 'mesin.*')
             ->get();
         // dd($users);
         PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);

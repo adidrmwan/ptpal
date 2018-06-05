@@ -1,4 +1,4 @@
-@extends('layouts.petugas-app')
+@extends('layouts.app')
 
 @section('title', 'Selamat Datang')
 
@@ -37,22 +37,34 @@
                             </tr>
                           </thead>
                           <tbody>
+                            @foreach($report as $data)
                             <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                              <td><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></td>
-                              <td><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true">&nbsp;</span>Edit</button></td>
+                              <th scope="row">{{$data->id}}</th>
+                              <td>{{$data->tipe_crane}}</td>
+                              <td>{{$data->nama_mesin}}</td>
+                              <td>{{$data->name}}</td>
+                              @if($data->tipe_crane == 'goliath')
+                              <td>
+                                <a href="{{action('InspeksiController@viewCraneGoliath', $data->id)}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></a>
+                              </td>
+                              @elseif($data->tipe_crane == 'LLC' || $data->tipe_crane == 'llc')
+                              <td>
+                                <a href="{{action('InspeksiController@viewCraneLLC', $data->id)}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></a>
+                              </td>
+                              @elseif($data->tipe_crane == 'overhead')
+                              <td>
+                                <a href="{{action('InspeksiController@viewCraneOverhead', $data->id)}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></a>
+                              </td>
+                              @elseif($data->tipe_crane == 'ph')
+                              <td>
+                                <a href="{{action('InspeksiController@viewCranePH', $data->id)}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></a>
+                              </td>
+                              @endif
+                              <td>
+                                <a href=""><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true">&nbsp;</span>Edit</button></a>
+                              </td>
                             </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                              <td><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></td>
-                              <td><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true">&nbsp;</span>Edit</button></td>
-                            </tr>
+                            @endforeach
                           </tbody>
                         </table>
                     </div>

@@ -25,11 +25,7 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        $user = Auth::user();
-        $userrole = DB::select("select role_id from role_user where user_id = '$user->id'");
-        if ( $userrole = 2 ) {
-            return redirect()->route('petugas.home');
-        }
+            return redirect()->route('index');
     }    
 
     public function __construct()

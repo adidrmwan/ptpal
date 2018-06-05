@@ -18,7 +18,7 @@ class RoleMiddleware
         if(! $request->user()->hasRole($roleName))
         {
             return redirect()
-                ->to('home');
+                ->to('/');
         }
         return $next($request);
     }

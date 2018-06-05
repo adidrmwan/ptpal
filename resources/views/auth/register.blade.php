@@ -27,20 +27,6 @@
                                             @endif
                                         </div>
                                     </div>
-                                    
-                                    <div class="form-group{{ $errors->has('department') ? ' has-error' : '' }}">
-                                        <label for="department" class="col-md-4 control-label">Department</label>
-
-                                        <div class="col-md-6">
-                                            <input id="department" type="text" class="form-control input-md" name="department" value="{{ old('department') }}" required autofocus>
-
-                                            @if ($errors->has('department'))
-                                                <span class="help-block">
-                                                    <strong>{{ $errors->first('department') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-                                    </div>
 
                                     <div class="form-group{{ $errors->has('divisi') ? ' has-error' : '' }}">
                                         <label for="divisi" class="col-md-4 control-label">Divisi</label>
