@@ -11,7 +11,7 @@ Route::get('/', function () {
                     ->select('role_id')
                     ->first();
         if ( $userrole->role_id == '1' ) {
-               return redirect()->route('manager.home');
+               return redirect()->route('report');
         }
         elseif ( $userrole->role_id == '2' ) {
                return redirect()->route('petugas.home');
@@ -25,16 +25,20 @@ Route::get('/', function () {
 //------------------------User's login-------------------------
 
 // Route untuk user manager
-Route::group(['prefix' => 'manager', 'middleware' => ['auth', 'role:manager']], function(){
-    Route::get('/', 'MaintenanceController@reportinspeksi')->name('manager.home');
+Route::group(['prefix' => 'report', 'middleware' => ['auth', 'role:manager']], function(){
+    Route::get('/inspeksi', 'MaintenanceController@reportinspeksi')->name('report');
+    Route::get('/check/{id}', 'MaintenanceController@checkmaintenance')->name('check');
+    Route::get('/history', 'MaintenanceController@reportmaintenance')->name('history');
     Route::get('/view/goliath/{id}', 'InspeksiController@viewCraneGoliath')->name('view.goliath');
     Route::get('/view/llc/{id}', 'InspeksiController@viewCraneLLC')->name('view.llc');
     Route::get('/view/ph/{id}', 'InspeksiController@viewCranePH')->name('view.ph');
     Route::get('/view/overhead/{id}', 'InspeksiController@viewCraneOverhead')->name('view.overhead');
+    Route::post('/maintenance/goliath', 'MaintenanceController@submitGoliath')->name('maintenance.goliath.submit');
+    Route::post('/maintenance/llc', 'MaintenanceController@submitLLC')->name('maintenance.llc.submit');
+    Route::post('/maintenance/overhead', 'MaintenanceController@submitOverhead')->name('maintenance.overhead.submit');
+    Route::post('/maintenance/ph', 'MaintenanceController@submitPH')->name('maintenance.ph.submit');
 
 });
-
-
 
 // Route untuk user petugas
 Route::group(['prefix' => 'petugas', 'middleware' => ['auth', 'role:petugas_checklist']], function(){
@@ -84,4 +88,3 @@ Route::get('/ph', 'InspeksiController@ph');
 Route::get('/overhead', 'InspeksiController@overhead');
 
 // ----------------maintenance------------------------
-Route::get('/report_inspeksi', 'MaintenanceController@reportinspeksi');

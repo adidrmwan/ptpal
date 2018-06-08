@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.manager-app')
 
 @section('title', 'Selamat Datang')
 
@@ -61,7 +61,7 @@
                               </td>
                               @endif
                               <td>
-                                <a href=""><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true">&nbsp;</span>Edit</button></a>
+                                <a href="{{action('MaintenanceController@checkmaintenance', $data->id)}}"><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true">&nbsp;</span>Edit</button></a>
                               </td>
                             </tr>
                             @endforeach

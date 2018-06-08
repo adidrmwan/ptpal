@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Maintenance;
+use Auth;
+use PDF;
+use Alert;
 
 class MaintenanceController extends Controller
 {
@@ -17,4 +21,45 @@ class MaintenanceController extends Controller
         return view('maintenance.reportinspeksi', ['report' => $report]);
     }
 
+
+    public function checkmaintenance($id)
+    {
+        $crane = DB::table('inspeksi')
+            ->join('users', 'users.id', '=', 'inspeksi.id_user')
+            ->join('crane_goliath', 'crane_goliath.id_inspeksi', '=', 'inspeksi.id')
+            ->join('mesin', 'inspeksi.kode_mesin', '=', 'mesin.kode_mesin')
+            ->where('inspeksi.id', $id)
+            ->select('users.name', 'users.divisi', 'crane_goliath.*', 'inspeksi.*', 'mesin.*')
+            ->get();
+
+        return view('maintenance.checkmaintenance', ['crane' => $crane]);
+    }
+
+    public function reportmaintenance()
+    {
+        return view('maintenance.reportmaintenance');
+    }
+
+
+    public function submitGoliath(Request $request)
+    {
+        $userid = Auth::user()->id;
+        $maintenance = new Maintenance();
+        $maintenance->id_user = $userid;
+        $maintenance->problem_kat_A_1 = $request->input('problem_kat_A_1');
+        $maintenance->problem_kat_A_2 = $request->input('problem_kat_A_2');
+        $maintenance->problem_kat_A_3 = $request->input('problem_kat_A_3');
+        $maintenance->problem_kat_B_1 = $request->input('problem_kat_B_1');
+        $maintenance->problem_kat_B_2 = $request->input('problem_kat_B_2');
+        $maintenance->problem_kat_B_3 = $request->input('problem_kat_B_3');
+        $maintenance->tgl_mulai = $request->input('tgl_mulai');
+        $maintenance->tgl_selesai = $request->input('tgl_selesai');
+        $maintenance->laporan_pelaksanaan = $request->input('laporan_pelaksanaan');
+        $maintenance->ket_material = $request->input('ket_material');
+
+        $maintenance->save();
+
+            return redirect()->intended(route('crane.goliath.view', $crane->id_inspeksi));
+        }   
+    }    
 }
