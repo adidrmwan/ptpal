@@ -11,6 +11,7 @@ class Maintenance extends Model
     public $timestamps = true;
     protected $fillable = [
     	'id_user', 
+        'id_inspeksi',
         'problem_kat_A_1',
     	'problem_kat_A_2', 
         'problem_kat_A_3',

@@ -35,17 +35,14 @@ class MaintenanceController extends Controller
         return view('maintenance.checkmaintenance', ['crane' => $crane]);
     }
 
-    public function reportmaintenance()
-    {
-        return view('maintenance.reportmaintenance');
-    }
 
-
-    public function submitGoliath(Request $request)
+    public function submit(Request $request)
     {
         $userid = Auth::user()->id;
+        $craneid = $request->input('crane_id');
         $maintenance = new Maintenance();
         $maintenance->id_user = $userid;
+        $maintenance->id_inspeksi = $craneid;
         $maintenance->problem_kat_A_1 = $request->input('problem_kat_A_1');
         $maintenance->problem_kat_A_2 = $request->input('problem_kat_A_2');
         $maintenance->problem_kat_A_3 = $request->input('problem_kat_A_3');
@@ -58,8 +55,40 @@ class MaintenanceController extends Controller
         $maintenance->ket_material = $request->input('ket_material');
 
         $maintenance->save();
-
-            return redirect()->intended(route('crane.goliath.view', $crane->id_inspeksi));
-        }   
+ 
+        return redirect()->intended(route('report'));
     }    
+
+    public function reportmaintenance()
+    {
+        $report = DB::table('maintenance')
+            ->join('users','users.id', '=', 'maintenance.id_user')
+            ->join('inspeksi','inspeksi.id', '=', 'maintenance.id_inspeksi')
+            ->join('mesin', 'mesin.kode_mesin', '=', 'inspeksi.kode_mesin')
+            ->select('maintenance.id', 'maintenance.tgl_mulai','users.name', 'mesin.nama_mesin', 'inspeksi.tgl_inspeksi')
+            ->get();
+
+        return view('maintenance.reportmaintenance', ['report' => $report]);
+    }
+
+    public function viewmaintenance($id)
+    {
+        $hour = DB::table('maintenance')
+            ->where('id', $id)
+            ->select(DB::raw("SUM(time_to_sec(timediff(tgl_selesai, tgl_mulai)) / 3600) as result"))
+            ->first();
+        $waktutotal = intval($hour->result);
+        $maintenance = DB::table('maintenance')
+            ->join('inspeksi','inspeksi.id', '=', 'maintenance.id_inspeksi')
+            ->join('users','users.id', '=', 'maintenance.id_user')
+            ->join('mesin', 'mesin.kode_mesin', '=', 'inspeksi.kode_mesin')
+            ->select('maintenance.*','users.name','users.divisi', 'mesin.*', 'inspeksi.tgl_inspeksi')
+            ->where('maintenance.id', $id)
+            ->get();
+        
+            // dd($maintenance);
+        return view('maintenance.viewmaintenance', ['maintenance' => $maintenance, 'waktutotal' => $waktutotal]);
+    }
+
+
 }

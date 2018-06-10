@@ -19,6 +19,7 @@
     <!-- /.intro-inner -->
 
     <div class="main-container inner-page">
+
         <div class="container">
             <div class="section-content">
                 <div class="row ">
@@ -36,16 +37,17 @@
                             </tr>
                           </thead>
                           <tbody>
-                            
+                            @foreach($report as $data)
                             <tr>
-                              <th scope="row">1</th>
-                              <td> Bla bla</td>
-                              <td> adi</td>
-                              <td> 17 nopember 1996</td>
+                              <th scope="row">{{$data->id}}</th>
+                              <td>{{$data->nama_mesin}}</td>
+                              <td>{{$data->name}}</td>
+                              <td>{{$data->tgl_mulai}}</td>
                               <td>
-                                <a href=""><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></a>
+                                <a href="{{action('MaintenanceController@viewmaintenance', $data->id)}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Show</button></a>
                               </td>
                             </tr>
+                            @endforeach
                           </tbody>
                         </table>
                     </div>

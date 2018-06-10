@@ -74,7 +74,7 @@
                             </li>
 
                             <li>
-                                 <a href="history_maintenance"> <b> History Maintenance </b> </a>
+                                 <a href="{{ route('history') }}"> <b> History Maintenance </b> </a>
                             </li>
 
                             @if (Auth::guest())

@@ -70,4 +70,24 @@ class PdfGenerateController extends Controller
         $pdf = PDF::loadView('pdf.pdf-ph', compact('users'));
         return $pdf->download('print_ph.pdf');
     }
+
+    public function pdfviewMaintenance($id)
+    {
+        $hour = DB::table('maintenance')
+            ->where('id', $id)
+            ->select(DB::raw("SUM(time_to_sec(timediff(tgl_selesai, tgl_mulai)) / 3600) as result"))
+            ->first();
+        $waktutotal = intval($hour->result);
+        $maintenance = DB::table('maintenance')
+            ->join('inspeksi','inspeksi.id', '=', 'maintenance.id_inspeksi')
+            ->join('users','users.id', '=', 'maintenance.id_user')
+            ->join('mesin', 'mesin.kode_mesin', '=', 'inspeksi.kode_mesin')
+            ->select('maintenance.*','users.name','users.divisi', 'mesin.*', 'inspeksi.tgl_inspeksi')
+            ->where('maintenance.id', $id)
+            ->get();
+
+        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'Roboto']);
+        $pdf = PDF::loadView('pdf.pdf-maintenance', ['maintenance' => $maintenance, 'waktutotal' => $waktutotal]);
+        return $pdf->download('maintenance.pdf');   
+    }
 }

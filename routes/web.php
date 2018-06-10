@@ -29,15 +29,12 @@ Route::group(['prefix' => 'report', 'middleware' => ['auth', 'role:manager']], f
     Route::get('/inspeksi', 'MaintenanceController@reportinspeksi')->name('report');
     Route::get('/check/{id}', 'MaintenanceController@checkmaintenance')->name('check');
     Route::get('/history', 'MaintenanceController@reportmaintenance')->name('history');
+    Route::get('/history/maintenance/{id}', 'MaintenanceController@viewmaintenance')->name('history.view');
     Route::get('/view/goliath/{id}', 'InspeksiController@viewCraneGoliath')->name('view.goliath');
     Route::get('/view/llc/{id}', 'InspeksiController@viewCraneLLC')->name('view.llc');
     Route::get('/view/ph/{id}', 'InspeksiController@viewCranePH')->name('view.ph');
     Route::get('/view/overhead/{id}', 'InspeksiController@viewCraneOverhead')->name('view.overhead');
-    Route::post('/maintenance/goliath', 'MaintenanceController@submitGoliath')->name('maintenance.goliath.submit');
-    Route::post('/maintenance/llc', 'MaintenanceController@submitLLC')->name('maintenance.llc.submit');
-    Route::post('/maintenance/overhead', 'MaintenanceController@submitOverhead')->name('maintenance.overhead.submit');
-    Route::post('/maintenance/ph', 'MaintenanceController@submitPH')->name('maintenance.ph.submit');
-
+    Route::post('/maintenance', 'MaintenanceController@submit')->name('maintenance.submit');
 });
 
 // Route untuk user petugas
@@ -69,6 +66,7 @@ Route::get('/generate-pdf-goliath/{id}', 'PdfGenerateController@pdfviewGoliath')
 Route::get('/generate-pdf-llc/{id}', 'PdfGenerateController@pdfviewLLC')->name('generate-pdf.llc');
 Route::get('/generate-pdf-ph/{id}', 'PdfGenerateController@pdfviewPH')->name('generate-pdf.ph');
 Route::get('/generate-pdf-overhead/{id}', 'PdfGenerateController@pdfviewOverhead')->name('generate-pdf.overhead');
+Route::get('/generate-pdf-maintenance/{id}', 'PdfGenerateController@pdfviewMaintenance')->name('generate-pdf.maintenance');
 
 Route::get('/divisi', 'InspeksiController@index');
 
